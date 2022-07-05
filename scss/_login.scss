@@ -1,0 +1,109 @@
+.login-form{
+    display: grid;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: $colorbody;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+    "... titulo-login ..."
+    "... imp-user ..."
+    "... imp-pass ..."
+    "... btn-login ..."
+    "... regist-log ...";
+        .titulo-login{
+            grid-area: titulo-login;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            background-color: $colorheader;
+            border-radius: 10% 10%;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 5px;
+                h2{
+                    color: $colorfooter;
+                }
+        }
+        .imp-user{
+            grid-area: imp-user;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+                .imp-log{
+                    background-color: map-get($colorbtn, colorsearch);
+                    width: 50%;
+                }
+        }
+        .imp-pass{
+            grid-area: imp-pass;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+                .imp-log{
+                    background-color: map-get($colorbtn, colorsearch);
+                    width: 50%;
+                }
+        }
+        .btn-login{
+            grid-area: btn-login;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+                .btn{
+                    box-shadow: map-get($sombras, sombrabtnheader);
+                    color: map-get($colorbtn, colorletrabtn) !important;
+                    background-color: $colorbtnform;
+                    border-style: none;
+                    margin-left: 2%;
+                    margin-right: 2%;
+                }
+                .btn:hover{
+                    transform: scale(0.9);
+                    background-color: $colorbtnformhover;
+                }
+        }
+        .regist-log{
+            grid-area: regist-log;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            color: map-get($colorbtn, colorletrabtn);
+        }
+}
+
+@media screen and (max-width: 900px) {
+    .login-form{
+        display: grid;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: $colorbody;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas: 
+        "titulo-login titulo-login titulo-login"
+        "imp-user imp-user imp-user"
+        "imp-pass imp-pass imp-pass"
+        "btn-login btn-login btn-login"
+        "regist-log regist-log regist-log";
+            .titulo-login{
+                grid-area: titulo-login;
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                background-color: $colorheader;
+                border-radius: 10% 10%;
+                width: 60%;
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-bottom: 5px;
+            }
+    }
+}

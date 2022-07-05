@@ -1,0 +1,85 @@
+.index-grid {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorbody2;
+    width: $full;
+}
+
+/*CARRUSELES*/
+.titulocarrusel{
+    text-align: center;
+    color: $colorfooterfin;
+    background-color: $colorbody;
+    border-radius: 10% 10%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+div.carousel {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row; 
+    object-fit: contain;
+    width: 98%;
+    height: 300px;
+    border: 0.5px ridge #8283846a;
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: row; 
+            object-fit: contain;
+            width: $full;
+            height: 300px;   
+                .carousel-item{
+                    width: 100% !important;
+                    transition-duration: 1s; 
+                    img{
+                        display: flex;
+                        align-items: center;
+                        justify-items: center;
+                        flex-direction: row; 
+                        object-fit: contain;
+                        width: $full;
+                        height: 300px;        
+                    }
+                    .zoom {
+                        transition: transform .2s; 
+                    }
+                    .zoom:hover {
+                        transform: scale(1.1); 
+                        cursor: pointer;
+                    }
+                    .img_spoon-lure {
+                        height: 250px;
+                    }
+                    .img_cania_abu_casting {
+                        height: 230px;
+                    }
+                    .img_cania_hielo {
+                        height: 350px;
+                        margin-bottom: 40px !important;
+                    }
+                    .img_cania_recreacion_ninio {
+                        height: 250px;
+                    }
+                }
+        }
+        .boton_carrusel {
+            opacity: 0.2 !important;
+            background-color: $btncarrusel;
+        }
+}
+
+
+
+
+
+
+

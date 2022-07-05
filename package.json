@@ -1,0 +1,25 @@
+{
+  "name": "PescandoUruguayStore",
+  "version": "1.0.0",
+  "description": "proyecto pescandouruguay con npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coloo99/PescandoUruguayStore_con_bootstrap.git"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coloo99/PescandoUruguayStore_con_bootstrap/issues"
+  },
+  "homepage": "https://github.com/coloo99/PescandoUruguayStore_con_bootstrap#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,44 @@
+/*Variables para aplicar en los estilos*/
+$full: 100%;
+$colorheader: #458dd6;
+$colordivproductos: #5290cebb;
+$colorbody: #5695d4af;
+$colorbody2:#9ac4efbb;
+$colorfooter: #0f364c;
+$colorfooterfin: #0b4c71;
+$colorletrasfooter: #4081a7;
+$colorletrabtn:white;
+$colorbtnform: #308faf;
+$colorbtnformhover: #44a6c7;
+$bordesgris: #828384;
+$btncarrusel:rgba(118, 170, 221, 0.387);
+
+/*Aplicando sombras con map al footer y los botones del nav*/
+$sombras:(
+    sombrafoot: 0 0 15px rgba(0, 0, 0, 0.72),
+    sombrabtnheader: 0 0 5px rgba(4, 8, 27, 0.797)
+);
+
+$colorbtn:(
+    colorsearch:rgba(232, 232, 232, 0.437),
+    colorbtnhover:rgb(25, 123, 209),
+    colorletrabtn:white,
+    $colorbtnform: #308faf
+);
+
+/*aplicando extend a imagenes del footer*/
+%imagenesfoot{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+/*Aplicando mixins*/
+@mixin tamanio($w, $h, $ml, $mr, $mb) {
+    width: $w;
+    height: $h;
+    margin-left: $ml;
+    margin-right: $mr;
+    margin-bottom: $mb;
+  }

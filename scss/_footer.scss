@@ -1,0 +1,180 @@
+footer { /*Fondo del footer*/
+    background-image: linear-gradient(to bottom, $colorfooter, $colorfooterfin); /* Aplique gradiente al footer */
+}
+.footer_grid { /*Grid general del footer*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "titulofoot titulofoot titulofoot"
+    "contactofoot redesfoot ubicacionfoot";
+    min-width: $full;
+    height: $full;
+        .titulofoot { /*Contenedor titulo del footer*/
+            grid-area: titulofoot;
+            object-fit: contain;
+            text-align: center;
+            margin-top: 5px;
+                .titulofootletras { /*Titulo del footer*/
+                    color: $colorletrasfooter;
+                }
+        }
+        .contactofoot { /*Como contactarnos en el footer*/
+            grid-area: contactofoot;
+            object-fit: contain;
+            text-align: center;
+            box-shadow: map-get($sombras, sombrafoot);
+            list-style:none;
+            width: $full;
+            height: $full;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 40% 60%;
+            grid-template-areas: 
+            "... contacto_titulo contacto_titulo ..."
+            "... logos_contactos1 logos_contactos2 ...";
+            justify-content: center;
+            align-items: center; 
+                .contacto_foot-titulo { /*Titulo de seccion contacto*/
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    margin-top: 10%;
+                    color: $colorletrasfooter;
+                    grid-area: contacto_titulo;
+                }
+                .logos_contactos1{
+                    grid-area: logos_contactos1;
+                }
+                .logos_contactos2{
+                    grid-area: logos_contactos2;
+                }
+                .imagenes_footer-contacto {
+                    margin-bottom: 30px;
+                    @extend %imagenesfoot;
+                }
+        }
+        .redesfoot { /*Nuestras redes en el footer*/
+            grid-area: redesfoot;
+            width: $full;
+            height: $full;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 40% 60%;
+            grid-template-areas: 
+            "... logos_redes1 logos_redes1 logos_redes2 logos_redes2 ..."
+            "... videoyt videoyt videoyt videoyt ...";
+            text-align: center;
+            justify-content: center;
+            align-items: center; 
+            box-shadow: map-get($sombras, sombrafoot);
+                .logos_redes1{
+                    grid-area: logos_redes1;
+                }
+                .logos_redes2{
+                    grid-area: logos_redes2;
+                }
+                .videoyt {
+                    grid-area: videoyt;
+                    @include tamanio(90%,80%,5%,5%,10%);
+                    opacity: 0.8;
+                }
+                .imagenes_footer-redes {
+                    margin-top: 5px;
+                    margin-bottom: 0px;
+                    @extend %imagenesfoot;
+                }
+        }
+        .ubicacionfoot { /*Ubicacion donde nos encontramos*/
+            grid-area: ubicacionfoot;
+            display: grid;
+            width: $full;
+            height: $full;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            box-shadow: map-get($sombras, sombrafoot);
+            color: aliceblue;
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+            grid-template-areas: 
+            "titulomapa"
+            "mapainfoot";
+                .titulomapainfofoot {
+                    grid-area: titulomapa;
+                    margin-top: 1%;
+                    margin-bottom: 2%;
+                    color: $colorletrasfooter;
+                }
+                .mapainfofoot {
+                    grid-area: mapainfoot;
+                    @include tamanio(80%,80%,10%,10%,10%);
+                    opacity: 0.8;
+                }
+        }
+}
+
+
+/* Querys del footer */
+@media screen and (max-width: 768px) {
+    .footer_grid {    
+        .contactofoot { /*Como contactarnos en el footer*/
+            grid-area: contactofoot;
+            object-fit: contain;
+            text-align: center;
+            box-shadow: map-get($sombras, sombrafoot);
+            list-style:none;
+            width: $full;
+            height: $full;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 30% 35% 35%;
+            grid-template-areas: 
+            "contacto_titulo contacto_titulo contacto_titulo"
+            "... logos_contactos1 ..."
+            "... logos_contactos2 ...";
+            justify-content: center;
+            align-items: center; 
+                .contacto_foot-titulo { /*Titulo de seccion contacto*/
+                    margin-top: 20%;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    margin-top: 10%;
+                    color: $colorletrasfooter;
+                    grid-area: contacto_titulo;
+                }
+                .logos_contactos1{
+                    grid-area: logos_contactos1;
+                }
+                .logos_contactos2{
+                    grid-area: logos_contactos2;
+                }
+                .imagenes_footer-contacto {
+                    width: 40px !important;
+                    height: 40px !important;
+                }
+        }
+        .redesfoot {
+            grid-area: redesfoot;
+            width: $full;
+            height: $full;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 30% 30% 40%;
+            grid-template-areas: 
+            "... logos_redes1 ..."
+            "... logos_redes2 ..."
+            "videoyt videoyt videoyt";
+            text-align: center;
+            justify-content: center;
+            align-items: center; 
+            box-shadow: map-get($sombras, sombrafoot);
+                .imagenes_footer-redes {
+                    width: 40px;
+                    height: 40px;
+                }
+                .videoyt {
+                    @include tamanio(70%,90%,15%,15%,5%);
+                }
+        }
+    }   
+}

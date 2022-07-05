@@ -1,0 +1,128 @@
+.reg-form{
+    display: grid;
+    background-color: $colorbody;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(7,1fr);
+    grid-template-areas: 
+    "... titulo-reg ..."
+    "... uno-reg ..."
+    "... dos-reg ..."
+    "... tres-reg ..."
+    "... cuatro-reg ..."
+    "... btn-reg ..."
+    "... reg-log ...";
+        .titulo-reg{
+            grid-area: titulo-reg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            width: $full;
+            background-color: $colorheader;
+            border-radius: 10% 10%;
+            margin-bottom: 5px;
+                h2{
+                    color: $colorfooter;
+                }
+        }
+        .uno-reg{
+            grid-area: uno-reg;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            justify-items: center;
+            width: $full;
+        }
+        .dos-reg{
+            grid-area: dos-reg;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            justify-items: center;
+            width: $full;
+        }
+        .tres-reg{
+            grid-area: tres-reg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            width: $full;
+        }
+        .cuatro-reg{
+            grid-area: cuatro-reg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            width: $full;
+        }
+        .reg-log{
+            grid-area: reg-log;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            color: map-get($colorbtn, colorletrabtn);
+        }
+        .btn-reg{ /*Estilos del boton registrarme*/
+            grid-area: btn-reg;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            width: $full;
+                .btn{
+                    box-shadow: map-get($sombras, sombrabtnheader);
+                    color: map-get($colorbtn, colorletrabtn) !important;
+                    background-color: $colorbtnform;
+                    border-style: none;
+                    margin-left: 2%;
+                    margin-right: 2%;
+                }
+                .btn:hover{
+                    transform: scale(0.9);
+                    background-color: $colorbtnformhover;
+                }
+        }
+        .imp-reg{ /*Estilos de los campos imput*/
+            width: 46%;
+            margin-left: 2%;
+            margin-right: 2%;
+            background-color: map-get($colorbtn, colorsearch);
+        }
+}
+
+@media screen and (max-width: 900px) {
+    .reg-form{
+        display: grid;
+        background-color: $colorbody;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(7,1fr);
+        grid-template-areas: 
+        "titulo-reg titulo-reg titulo-reg"
+        "uno-reg uno-reg uno-reg"
+        "dos-reg dos-reg dos-reg"
+        "tres-reg tres-reg tres-reg"
+        "cuatro-reg cuatro-reg cuatro-reg"
+        "... btn-reg ..."
+        "reg-log reg-log reg-log";
+            .titulo-reg{
+                grid-area: titulo-reg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                width: 70%;
+                margin-left: 15%;
+                margin-right: 15%;
+                background-color: $colorheader;
+                border-radius: 10% 10%;
+                margin-bottom: 5px;
+            }
+    }
+}
