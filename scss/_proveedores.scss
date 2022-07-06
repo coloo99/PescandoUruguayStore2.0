@@ -1,11 +1,30 @@
 .index_grid_prov {
-    background-color: #9ac4ef00 !important;
+    background-color: $colorbody2 !important;
+    .titulo-prov{
+        width: 50%;
+        height: 100%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 5%;
+        padding-bottom: 5px;
+        color: $colorfooterfin;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
+        background-color: #74a6d97c;
+        color: white;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
         .cont_prov {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            background-color: $colorbody2 !important;
+            background-color: #9ac4ef00 !important;
                 .row-cols-md-2 {
                     display: flex;
                     align-items: center;
@@ -47,4 +66,15 @@
                     
                 }
         }
+}
+
+@media screen and (max-width: 625px) {
+    .titulo-prov{
+        width: 70% !important;
+        height: 100%;
+        margin-left: 15% !important;
+        margin-right: 15% !important;
+        margin-top: 5%;
+        padding-bottom: 5px;
+    }
 }
