@@ -6,19 +6,31 @@
 }
 
 /*CARRUSELES*/
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0px !important;
+}
+h2 {
+    margin-bottom: 0px !important;
+}
+
 .titulocarrusel{
     text-align: center;
     color: $colorfooterfin;
     background-color: $colorbody;
-    border-radius: 10% 10%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10px;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    padding-bottom: 10px;
 }
 div.carousel {
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 0px;
     margin-left: 1%;
     margin-right: 1%;
     display: flex;
@@ -28,7 +40,8 @@ div.carousel {
     object-fit: contain;
     width: 98%;
     height: 300px;
-    border: 0.5px ridge #8283846a;
+    border: 0.5px ridge #82838400;
+    box-shadow: map-get($sombras, sombracarrousel) !important;
         .carousel-inner {
             display: flex;
             align-items: center;
@@ -72,7 +85,7 @@ div.carousel {
                 }
         }
         .boton_carrusel {
-            opacity: 0.2 !important;
+            opacity: 0.1 !important;
             background-color: $btncarrusel;
         }
 }

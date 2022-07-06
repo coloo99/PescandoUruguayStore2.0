@@ -16,7 +16,8 @@ $btncarrusel:rgba(118, 170, 221, 0.387);
 /*Aplicando sombras con map al footer y los botones del nav*/
 $sombras:(
     sombrafoot: 0 0 15px rgba(0, 0, 0, 0.72),
-    sombrabtnheader: 0 0 5px rgba(4, 8, 27, 0.797)
+    sombrabtnheader: 0 0 5px rgba(4, 8, 27, 0.797),
+    sombracarrousel: 0 0 5px rgba(9, 14, 39, 0.69)
 );
 
 $colorbtn:(
