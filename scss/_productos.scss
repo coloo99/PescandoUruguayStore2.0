@@ -13,14 +13,17 @@ body{
         "contprod";
             .item {
                 grid-area: item;
-                border: 2px solid $colorfooterfin;
+                /* border: 2px solid $colorfooterfin; */
                 width: 60%;
                 height: 100%;
                 margin-left: 20%;
                 margin-right: 20%;
-                margin-top: 2%;
+                color: $colorfooterfin;
+                border-top-left-radius: 15px !important;
+                border-top-right-radius: 15px !important;
+                border-bottom-left-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
                 background-color: $colorheader;
-                border-radius: 10% 10%;
                 color: white;
                 display: flex;
                 justify-content: center;
@@ -33,7 +36,8 @@ body{
                 height: 100%;
                 margin-left: 10%;
                 margin-right: 10%;
-                margin-top: 5%;
+                margin-top: 1%;
+                background-color: $colorheader;
                 margin-bottom: 2%;
                 display: flex;
                 justify-content: space-between;

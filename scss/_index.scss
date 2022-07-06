@@ -52,7 +52,7 @@ div.carousel {
             height: 300px;   
                 .carousel-item{
                     width: 100% !important;
-                    transition-duration: 1s; 
+                    transition-duration: 0.1s; 
                     img{
                         display: flex;
                         align-items: center;
@@ -63,23 +63,27 @@ div.carousel {
                         height: 300px;        
                     }
                     .zoom {
-                        transition: transform .2s; 
+                        transition: transform .3s; 
                     }
                     .zoom:hover {
                         transform: scale(1.1); 
                         cursor: pointer;
                     }
                     .img_spoon-lure {
-                        height: 250px;
+                        height: 300px;
+                    }
+                    .img_popper{
+                        height: 300px;
                     }
                     .img_cania_abu_casting {
-                        height: 230px;
+                        margin-top: 15px;
+                        height: 250px;
                     }
-                    .img_cania_hielo {
-                        height: 350px;
-                        margin-bottom: 40px !important;
+                    .img_cania_globeride {
+                        width: 250px;
                     }
                     .img_cania_recreacion_ninio {
+                        margin-top: 15px;
                         height: 250px;
                     }
                 }

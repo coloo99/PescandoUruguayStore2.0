@@ -4,7 +4,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px !important;
             width: 100%;
             background-color: $colorbody2 !important;
                 .row-cols-md-2 {
@@ -37,12 +36,15 @@
                                     color: white !important;
                                     display: flex;
                                     text-align: center;
+                                    justify-content: center;
+                                    align-items: center;
                                 }
                                 .boton_prov:hover {
                                     transform: scale(0.9) !important;
                                     background-color: $colorbtnformhover !important;
                                 }
                         }
+                    
                 }
         }
 }

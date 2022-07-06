@@ -237,7 +237,7 @@ header div .row_header {
             margin-top: 5%;
             margin-bottom: 5%; }
   header div .row_header .logo-pag {
-    /*Logo redondo de la pagina*/
+    /*Logo redondo con letras de la pagina*/
     margin-top: 0px;
     margin-bottom: 5px;
     width: 100%;
@@ -446,7 +446,7 @@ div.carousel {
     height: 300px; }
     div.carousel .carousel-inner .carousel-item {
       width: 100% !important;
-      transition-duration: 1s; }
+      transition-duration: 0.1s; }
       div.carousel .carousel-inner .carousel-item img {
         display: flex;
         align-items: center;
@@ -456,18 +456,21 @@ div.carousel {
         width: 100%;
         height: 300px; }
       div.carousel .carousel-inner .carousel-item .zoom {
-        transition: transform .2s; }
+        transition: transform .3s; }
       div.carousel .carousel-inner .carousel-item .zoom:hover {
         transform: scale(1.1);
         cursor: pointer; }
       div.carousel .carousel-inner .carousel-item .img_spoon-lure {
-        height: 250px; }
+        height: 300px; }
+      div.carousel .carousel-inner .carousel-item .img_popper {
+        height: 300px; }
       div.carousel .carousel-inner .carousel-item .img_cania_abu_casting {
-        height: 230px; }
-      div.carousel .carousel-inner .carousel-item .img_cania_hielo {
-        height: 350px;
-        margin-bottom: 40px !important; }
+        margin-top: 15px;
+        height: 250px; }
+      div.carousel .carousel-inner .carousel-item .img_cania_globeride {
+        width: 250px; }
       div.carousel .carousel-inner .carousel-item .img_cania_recreacion_ninio {
+        margin-top: 15px;
         height: 250px; }
   div.carousel .boton_carrusel {
     opacity: 0.1 !important;
@@ -485,14 +488,17 @@ body {
     grid-template-areas: "..." "item" "contprod"; }
     body .main_productos .item {
       grid-area: item;
-      border: 2px solid #0b4c71;
+      /* border: 2px solid $colorfooterfin; */
       width: 60%;
       height: 100%;
       margin-left: 20%;
       margin-right: 20%;
-      margin-top: 2%;
+      color: #0b4c71;
+      border-top-left-radius: 15px !important;
+      border-top-right-radius: 15px !important;
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
       background-color: #458dd6;
-      border-radius: 10% 10%;
       color: white;
       display: flex;
       justify-content: center;
@@ -504,7 +510,8 @@ body {
       height: 100%;
       margin-left: 10%;
       margin-right: 10%;
-      margin-top: 5%;
+      margin-top: 1%;
+      background-color: #458dd6;
       margin-bottom: 2%;
       display: flex;
       justify-content: space-between;
@@ -1078,7 +1085,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px !important;
     width: 100%;
     background-color: #9ac4efbb !important; }
     .index_grid_prov .cont_prov .row-cols-md-2 {
@@ -1107,7 +1113,9 @@ body {
           background-color: #308faf !important;
           color: white !important;
           display: flex;
-          text-align: center; }
+          text-align: center;
+          justify-content: center;
+          align-items: center; }
         .index_grid_prov .cont_prov div.row_prov .col_prov .boton_prov:hover {
           transform: scale(0.9) !important;
           background-color: #44a6c7 !important; }
@@ -1158,7 +1166,7 @@ body {
       margin-bottom: 2%;
       margin-left: 10%;
       margin-right: 10%;
-      background-color: #458dd6;
+      background-color: #6da4dc00;
       border-radius: 10% 10%;
       color: #0b4c71;
       display: flex;
@@ -1221,7 +1229,7 @@ body {
       margin-bottom: 5%;
       margin-left: 20%;
       margin-right: 20%;
-      background-color: #458dd6;
+      background-color: #6da4dc00;
       border-radius: 10% 10%;
       color: #0b4c71;
       display: flex;
