@@ -1191,6 +1191,11 @@ body {
     margin-top: 5%;
     padding-bottom: 5px; } }
 
+@media screen and (max-width: 576px) {
+  /*Arregla error que mostraba un proveedoer alado del otro apretados*/
+  .col {
+    flex: none !important; } }
+
 .main_contacto {
   background-color: #9ac4efbb; }
   .main_contacto .cont-form {

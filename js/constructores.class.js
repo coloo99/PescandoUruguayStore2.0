@@ -20,3 +20,12 @@ class Envio{
         this.precioTotal = precioT;
     }
 }
+class Consulta{
+    constructor(nombre, apellido, email, telefono, consulta){ 
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+        this.consulta = consulta;
+    }
+}

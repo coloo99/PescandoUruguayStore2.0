@@ -66,16 +66,16 @@
                     <h2>Formulario de contacto</h2>
                 </div>
                 <div class="imp-name ">
-                <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre" required>
+                <input type="text" class="form-control" id="nombrec" name="nombrec" placeholder="Ingresa tu nombre" required>
                 </div>
                 <div class="imp-apellido">
-                <input type="text" class="form-control" name="apellido" placeholder="Ingresa tu apellido" required>
+                <input type="text" class="form-control" id="apellidoc" name="apellidoc" placeholder="Ingresa tu apellido" required>
                 </div>
                 <div class="imp-email">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Ingresa tu e-mail">
+                    <input type="email" class="form-control" id="emailc" name="emailc" placeholder="Ingresa tu e-mail">
                 </div>
                 <div class="imp-tel">
-                <input type="tel" class="form-control" name="telefono" placeholder="Ingresa tu telefono">
+                <input type="tel" class="form-control" id="telefonoc" name="telefonoc" placeholder="Ingresa tu telefono">
                 </div>
                 <div class="titulo-cons">
                     <h4 class="consulta">Escribe tu consulta</h4>
@@ -88,13 +88,19 @@
                     </select>
                 </div>
                 <div class="imp-cons">
-                    <textarea name="consulta" class="form-control" placeholder="Deja tu consulta aqui" cols="80" rows="15"></textarea>
+                    <textarea class="form-control" id="consulta" name="consulta" placeholder="Deja tu consulta aqui" cols="80" rows="15"></textarea>
                 </div>
                 <div class="botones-form">
-                    <button type="submit" class="btn-submit btn btn-primary">Enviar</button>
+                    <!-- <button type="submit" class="btn-submit btn btn-primary">Enviar</button> -->
+                    <input data-swal-toast-template="#my-template" type="submit" id="enviar-consulta" class="btn-submit btn btn-primary" value="Enviar">
                     <button type="reset" class="btn-reset btn btn-primary">Limpiar</button>
                 </div>
             </form>
+            <!-- Scripts de Email JS -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+              emailjs.init('p6dbbddI3saxe9DBA')
+            </script>
         </main>
         <!--CARRITO DE COMPRAS-->
         <div class="modal-contenedor">

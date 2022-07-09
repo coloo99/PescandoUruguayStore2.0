@@ -1,11 +1,11 @@
-let envio = []
+let consulta = []
 let alerta = JSON.parse(localStorage.getItem('alerta'))
 localStorage.setItem('alerta', JSON.stringify(false))
 
 /*///////  FORMULARIO DE COMPRA  ///////*/
 const datosPedido = document.getElementById('datos-pedido');
 
-/*////////  ALERTAS  ////////*/
+/*////////  ALERTAS ERROR Y SUCCESS  ////////*/
 const alertarSuccess = (titulo, mensaje)=> { /*Alerta sastifactorio al agregar y quitar items del carrito*/
     Swal.fire({
         title: titulo,
@@ -39,40 +39,17 @@ const alertarError = (mensaje)=> {  /*Alerta de eror al querer pagar sin ningun 
 if(alerta == true){
     alertarError("Debe agregar un producto al carrito para poder continuar");
 }
-
-const alertarEnvio = (tit, datos)=> { /*Alerta para seleccionar datos de compra*/
-    Swal.fire({
-        title: tit,
-        html: datos,
-        icon: 'success',
-        showConfirmButton: true,
-        confirmButtonText: 'Confirmar',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6', 
-        cancelButtonColor: '#d33'
-    }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire({
-                            title:'Compra realizada!',
-                            text: 'Tu compra se enviara al destino seleccionado, gracias por preferirnos :)',
-                            icon:'success',
-                            confirmButtonText: 'Continuar comprando',
-                            confirmButtonColor: '#3085d6', 
-                            cancelButtonColor: '#d33'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                localStorage.setItem("carrito", JSON.stringify(null))
-                                window.location.replace("../pages/productos.html");
-                            }
-                        })
-                    } 
-    })
-}
 /*////////// Fin Alertas /////////*/
 
 /*//////////  CARRITO  //////////*/
 let carrito = []
 carrito = JSON.parse(localStorage.getItem('carrito'))
+let precioT = 0
+if(carrito != null){
+    for (let i = 0; i < carrito.length; i++) {
+        precioT += carrito[i].producto.precio * carrito[i].cantidad;
+    }
+}
 actualizarCarrito(carrito)
 mostrarCarrito(carrito)
 
@@ -130,15 +107,15 @@ function  actualizarCarrito (carrito){
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
- /*Evento del boton pagar dentro del carrito*/
- let enviado = false
- const btnPagar = document.getElementById('pagar')
- btnPagar.addEventListener('click', ()=> {
-     if(env == true){
-         enviado = false
-         localStorage.setItem('enviado', JSON.stringify(enviado));
-     }
- })
+/*Evento del boton pagar dentro del carrito*/
+let enviado = false
+const btnPagar = document.getElementById('pagar')
+btnPagar.addEventListener('click', ()=> {
+    if(env == true){
+        enviado = false
+        localStorage.setItem('enviado', JSON.stringify(enviado));
+    }
+})
 /*///////// Fin Carrito ///////////*/
 
 /*///////  FORMULARIO TERMINAR COMPRA  ///////*/
@@ -153,10 +130,6 @@ function pagar(){  /*Crear ticket de ventana en terminarCompra*/
                                 </tr>`
     }
     if(datosPedido != null || undefined){
-        let precioT = 0;
-        for (let i = 0; i < carrito.length; i++) {
-            precioT += carrito[i].producto.precio * carrito[i].cantidad;
-        }
         if(precioT != 0){
             carrito.forEach(produc => {
                 let tipo
@@ -200,29 +173,74 @@ if(acc != null){  /*Desplegar ticket dentro del formulario de compra*/
     }
 }
 
-const enviarPedido = document.getElementById('enviar-pedido');
-enviarPedido.addEventListener('click', ()=> {  /*Evento al boton que envia los datos del pedido*/ 
-    if(enviarPedido != null || undefined){
-        envio.push(new Envio(document.getElementById("nombre").value, document.getElementById("apellido").value, document.getElementById("email").value, document.getElementById("telefono").value, document.getElementById("direccion").value, document.getElementById("localidad").value));
-        localStorage.setItem('envio', JSON.stringify(envio));
-        let env = true;
-        enviado = true;
-        localStorage.setItem('env', JSON.stringify(env));
-        localStorage.setItem('enviado', JSON.stringify(enviado));
-    }
-})
+const alertarEnvio = (tit, datos)=> { /*Alerta para seleccionar datos de compra*/
+    Swal.fire({
+        title: tit,
+        html: datos,
+        icon: 'success',
+        showConfirmButton: true,
+        confirmButtonText: 'Confirmar',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6', 
+        cancelButtonColor: '#d33'
+    }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title:'Compra realizada!',
+                            text: 'Tu compra se enviara al destino seleccionado, gracias por preferirnos :)',
+                            icon:'success',
+                            confirmButtonText: 'Continuar comprando',
+                            confirmButtonColor: '#3085d6', 
+                            cancelButtonColor: '#d33'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                localStorage.setItem("carrito", JSON.stringify(null))
+                                /*///// EMAIL JS /////*/
+                                emailjs.send("service_mvoq7l7","template_ib5m2ri",{
+                                    nombre: datosEnvio[0].nombre,
+                                    apellido: datosEnvio[0].apellido,
+                                    email: datosEnvio[0].email,
+                                    telefono: datosEnvio[0].telefono,
+                                    direccion: datosEnvio[0].direccion,
+                                    localidad: datosEnvio[0].localidad,
+                                    message: precioT,
+                                });
+                                /*///// FIN EMAIL JS /////*/
+                            }
+                            setTimeout(function(){
+                                window.location.replace("../pages/productos.html");
+                            }, 1500);
+                        })
+                    } 
+    })
+}
 
-/*Se obtiene envio desde el LocalStorage y se verifica si ya realizo un pedido(y muestra un SwAl con los datos usados anteriormente y la opcion de usar los mismos) o si es el primer pedido que realiza tiene que llenar los campos del form*/
-let datosEnvio = []
-datosEnvio = JSON.parse(localStorage.getItem('envio'))
-enviado = JSON.parse(localStorage.getItem('enviado'))
-env = JSON.parse(localStorage.getItem('env'))
-if(datosEnvio != null && datosEnvio.length != 0 && !enviado){
-    alertarEnvio("Quieres usar los mismos datos de envio?", `<p>Nombre: ${datosEnvio[0].nombre} ${datosEnvio[0].apellido}</p><p>Direccion: ${datosEnvio[0].direccion}</p><p>Localidad: ${datosEnvio[0].localidad}</p><p>Celular: ${datosEnvio[0].telefono}</p>`)
-}else if(datosEnvio != null && datosEnvio.length != 0 && env){
-    alertarEnvio("Revisa los datos y confirma la compra", `</p>Estimado ${datosEnvio[0].nombre} ${datosEnvio[0].apellido} el envio se realizara con los siguientes datos:</p> <p>Direccion: ${datosEnvio[0].direccion}</p><p>Localidad: ${datosEnvio[0].localidad}</p></p><p>Celular: ${datosEnvio[0].telefono}</p>`)
-    env = false;
-    localStorage.setItem('env', JSON.stringify(env));
-    enviado = false;
-    localStorage.setItem('enviado', JSON.stringify(enviado));
+/*Obtengo los datos de la consulta, hago un push del objeto consulta y guardo la variable consulta en el local storage para obtenerla mas abajo*/
+const enviarConsulta = document.getElementById('enviar-consulta');
+if(enviarConsulta != null || undefined){
+    enviarConsulta.addEventListener('click', ()=> {  /*Evento al boton que envia la consulta*/ 
+        if(enviarConsulta != null || undefined){
+            consulta.push(new Consulta(document.getElementById("nombrec").value, document.getElementById("apellidoc").value, document.getElementById("emailc").value, document.getElementById("telefonoc").value, document.getElementById("consulta").value));
+            localStorage.setItem('consulta', JSON.stringify(consulta));
+        }
+        /* enviarEmailConsulta() */
+    })
+}
+
+/*Se envia un mail sobre la consulta*/
+let datosConsulta = []
+datosConsulta = JSON.parse(localStorage.getItem('consulta'))
+if(datosConsulta != null && datosConsulta.length != 0){
+    emailjs.send("service_mvoq7l7","template_3uentfi",{
+        namec: datosConsulta[0].nombre,
+        apellidoc: datosConsulta[0].apellido,
+        emailc: datosConsulta[0].email,
+        telefonoc: datosConsulta[0].telefono,
+        consulta: datosConsulta[0].consulta,
+    });
+    consulta = []
+    localStorage.setItem('consulta', JSON.stringify(consulta));
+    setTimeout(function(){
+        window.location.replace("../index.html");
+    }, 1500);
 }

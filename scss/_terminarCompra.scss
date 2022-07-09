@@ -68,113 +68,112 @@
                     margin-bottom: 20px;
                     margin-left: 5%;
                     margin-right: 5%;
-                    button.accordion {
-                        background-color: #87b0dabb;
-                        color: #444;
-                        cursor: pointer;
-                        padding: 18px;
-                        width: 20%;
-                        border: none;
-                        text-align: center;
-                        outline: none;
-                        font-size: 15px;
-                        transition: 0.4s;
-                    }
-                    button.accordion.active, button.accordion:hover {
-                        padding: 18px;
-                        width: 100%;
-                        border: none;
-                        text-align: center;
-                        outline: none;
-                        font-size: 15px;
-
-                        background-color: #6b99c8bb;
-                    }
-                    button.accordion:after {
-                        content: '\02795';
-                        font-size: 13px;
-                        text-align: center;
-                        color: rgba(119, 119, 119, 0.435);
-                        float: right;
-                        margin-left: 5px;
-                    }
-                    button.accordion.active:after {
-                        content: "\2796";
-                    }
-                    div.panel {
-                        padding: 0 18px;
-                        background-color: #91beebbb;
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: 0.6s ease-in-out;
-                        opacity: 0;
-                        .datos-p{
-                            width: 90%;
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                            margin-left: 5%;
-                            margin-right: 5%;
-                            border-top-left-radius: 10px;
-                            border-top-right-radius: 10px;
-                            border-bottom-left-radius: 10px;
-                            border-bottom-right-radius: 10px;
-                            .altura-datos{
-                                height: 20px;
-                                .titulos-tabla{
-                                    padding: 5px;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: white;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: white;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-precio{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: rgb(43, 132, 46);
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-precioT{
-                                    padding: 5px;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: rgb(43, 132, 46);
-                                    font-weight: bold;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-vacios{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: rgb(255, 255, 255);
-                                    background-color: #ffffff00;
-                            
-                                }
-                                .ancho{
-                                    width: 20px;
-                                }
-                            }
+                        button.accordion {
+                            background-color: #87b0dabb;
+                            color: #444;
+                            cursor: pointer;
+                            padding: 18px;
+                            width: 20%;
+                            border: none;
+                            text-align: center;
+                            outline: none;
+                            font-size: 15px;
+                            transition: 0.4s;
                         }
-                    }
-                    div.panel.show {
-                        opacity: 1;
-                        max-height: 500px;
-                    }
+                        button.accordion.active, button.accordion:hover {
+                            padding: 18px;
+                            width: 100%;
+                            border: none;
+                            text-align: center;
+                            outline: none;
+                            font-size: 15px;
+                            background-color: #6b99c8bb;
+                        }
+                        button.accordion:after {
+                            content: '\02795';
+                            font-size: 13px;
+                            text-align: center;
+                            color: rgba(119, 119, 119, 0.435);
+                            float: right;
+                            margin-left: 5px;
+                        }
+                        button.accordion.active:after {
+                            content: "\2796";
+                        }
+                        div.panel {
+                            padding: 0 18px;
+                            background-color: #91beebbb;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: 0.6s ease-in-out;
+                            opacity: 0;
+                                .datos-p{
+                                    width: 90%;
+                                    margin-top: 10px;
+                                    margin-bottom: 20px;
+                                    margin-left: 5%;
+                                    margin-right: 5%;
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                        .altura-datos{
+                                            height: 20px;
+                                                .titulos-tabla{
+                                                    padding: 5px;
+                                                    font-size: 20px;
+                                                    text-align: center;
+                                                    color: white;
+                                                    border: 2px solid white;
+                                                    border-collapse: collapse;
+                                                    background-color: #6da4dcae;
+                                                }
+                                                .datos-tabla{
+                                                    padding: 5px;
+                                                    font-size: 15px;
+                                                    text-align: center;
+                                                    color: white;
+                                                    border: 2px solid white;
+                                                    border-collapse: collapse;
+                                                    background-color: #6da4dcae;
+                                                }
+                                                .datos-tabla-precio{
+                                                    padding: 5px;
+                                                    font-size: 15px;
+                                                    text-align: center;
+                                                    color: rgb(43, 132, 46);
+                                                    border: 2px solid white;
+                                                    border-collapse: collapse;
+                                                    background-color: #6da4dcae;
+                                                }
+                                                .datos-tabla-precioT{
+                                                    padding: 5px;
+                                                    font-size: 20px;
+                                                    text-align: center;
+                                                    color: rgb(43, 132, 46);
+                                                    font-weight: bold;
+                                                    border: 2px solid white;
+                                                    border-collapse: collapse;
+                                                    background-color: #6da4dcae;
+                                                }
+                                                .datos-tabla-vacios{
+                                                    padding: 5px;
+                                                    font-size: 15px;
+                                                    text-align: center;
+                                                    color: rgb(255, 255, 255);
+                                                    background-color: #ffffff00;
+                                            
+                                                }
+                                                .ancho{
+                                                    width: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                        div.panel.show {
+                            opacity: 1;
+                            max-height: 500px;
+                        }
                 }
                 .imp-namec{
                     grid-area: imp-namec;
@@ -302,305 +301,305 @@
 @media screen and (max-width: 1200px) {
     .main_contacto {
         background-color: $colorbody2;
-        .cont-formc {
-            display: grid;
-            padding-top: 80px;
-            padding-bottom: 120px;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 50px, 40px, 40px, 40px, auto, 40px;
-            grid-template-areas: 
-            "titulo-formc titulo-formc titulo-formc titulo-formc"
-            "imp-namec imp-namec imp-apellidoc imp-apellidoc"
-            "imp-emailc imp-emailc imp-telc imp-telc"
-            "imp-dirc imp-dirc imp-depac imp-depac"
-            "datos-p datos-p datos-p datos-p"
-            "... botones-formc botones-formc ...";
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
-                input:not([type]), input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 2px solid #6da4dc;
-                    border-top-left-radius: 10px !important;
-                    border-top-right-radius: 10px !important;
-                    border-bottom-left-radius: 10px !important;
-                    border-bottom-right-radius: 10px !important;
-                    outline: none;
-                    width: 90%;
-                    height: 50%;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                    font-size: 1rem;
-                    padding: 0;
-                    box-shadow: none;
-                    box-sizing: content-box;
-                    transition: all .3s;
-                }
-                input:not([type]), input[type=text]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder, textarea.materialize-textarea::placeholder{ 
-                    text-align: center;
-                }
-                input:not([type]), input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, textarea.materialize-textarea:focus {
-                    border-bottom: 2px solid #1c538a;
-                }
-                .titulo-formc{
-                    grid-area: titulo-formc;
-                    width: 90%;
-                    height: 50%;
-                    margin-top: 5%;
-                    margin-bottom: 2%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    color: $colorfooterfin;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .ticket{
-                    grid-area: datos-p;
-                    width: 90%;
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    button.accordion {
-                        background-color: #87b0dabb;
-                        color: rgb(255, 255, 255);
-                        cursor: pointer;
-                        padding: 18px;
-                        width: 20%;
-                        margin-left: 30%;
-                        margin-right: 30%;
+            .cont-formc {
+                display: grid;
+                padding-top: 80px;
+                padding-bottom: 120px;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 50px, 40px, 40px, 40px, auto, 40px;
+                grid-template-areas: 
+                "titulo-formc titulo-formc titulo-formc titulo-formc"
+                "imp-namec imp-namec imp-apellidoc imp-apellidoc"
+                "imp-emailc imp-emailc imp-telc imp-telc"
+                "imp-dirc imp-dirc imp-depac imp-depac"
+                "datos-p datos-p datos-p datos-p"
+                "... botones-formc botones-formc ...";
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                    input:not([type]), input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+                        background-color: transparent;
                         border: none;
-                        text-align: center;
+                        border-bottom: 2px solid #6da4dc;
+                        border-top-left-radius: 10px !important;
+                        border-top-right-radius: 10px !important;
+                        border-bottom-left-radius: 10px !important;
+                        border-bottom-right-radius: 10px !important;
                         outline: none;
-                        font-size: 15px;
-                        transition: 0.4s;
+                        width: 90%;
+                        height: 50%;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                        font-size: 1rem;
+                        padding: 0;
+                        box-shadow: none;
+                        box-sizing: content-box;
+                        transition: all .3s;
                     }
-                    button.accordion.active, button.accordion:hover {
-                        padding: 18px;
-                        width: 100%;
-                        margin-left: 0%;
-                        margin-right: 0%;
-                        border: none;
+                    input:not([type]), input[type=text]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder, textarea.materialize-textarea::placeholder{ 
                         text-align: center;
-                        outline: none;
-                        font-size: 15px;
-                        background-color: #6994bfbb;
                     }
-                    button.accordion::after {
-                        content: '\02795';
-                        font-size: 13px;
-                        text-align: center;
-                        color: rgb(255, 255, 255);
-                        float: right;
-                        margin-left: 5px;
+                    input:not([type]), input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, textarea.materialize-textarea:focus {
+                        border-bottom: 2px solid #1c538a;
                     }
-                    button.accordion.active::after {
-                        content: "\2796";
-                        color: white; /*Supuesto color del boton + */
+                    .titulo-formc{
+                        grid-area: titulo-formc;
+                        width: 90%;
+                        height: 50%;
+                        margin-top: 5%;
+                        margin-bottom: 2%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        color: $colorfooterfin;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
                     }
-                    div.panel {
-                        padding: 0 18px;
-                        background-color: #91beebbb;
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: 0.6s ease-in-out;
-                        opacity: 0;
-                        .datos-p{
-                            width: 90%;
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                            margin-left: 5%;
-                            margin-right: 5%;
-                            border-top-left-radius: 10px;
-                            border-top-right-radius: 10px;
-                            border-bottom-left-radius: 10px;
-                            border-bottom-right-radius: 10px;
-                            .altura-datos{
-                                height: 20px;
-                                .titulos-tabla{
-                                    padding: 5px;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: white;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: white;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-precio{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: rgb(43, 132, 46);
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-precioT{
-                                    padding: 5px;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: rgb(43, 132, 46);
-                                    font-weight: bold;
-                                    border: 2px solid white;
-                                    border-collapse: collapse;
-                                    background-color: #6da4dcae;
-                                }
-                                .datos-tabla-vacios{
-                                    padding: 5px;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: rgb(255, 255, 255);
-                                    background-color: #ffffff00;
-                            
-                                }
-                                .ancho{
-                                    width: 20px;
+                    .ticket{
+                        grid-area: datos-p;
+                        width: 90%;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                            button.accordion {
+                                background-color: #87b0dabb;
+                                color: rgb(255, 255, 255);
+                                cursor: pointer;
+                                padding: 18px;
+                                width: 20%;
+                                margin-left: 30%;
+                                margin-right: 30%;
+                                border: none;
+                                text-align: center;
+                                outline: none;
+                                font-size: 15px;
+                                transition: 0.4s;
+                            }
+                            button.accordion.active, button.accordion:hover {
+                                padding: 18px;
+                                width: 100%;
+                                margin-left: 0%;
+                                margin-right: 0%;
+                                border: none;
+                                text-align: center;
+                                outline: none;
+                                font-size: 15px;
+                                background-color: #6994bfbb;
+                            }
+                            button.accordion::after {
+                                content: '\02795';
+                                font-size: 13px;
+                                text-align: center;
+                                color: rgb(255, 255, 255);
+                                float: right;
+                                margin-left: 5px;
+                            }
+                            button.accordion.active::after {
+                                content: "\2796";
+                                color: white; /*Supuesto color del boton + */
+                            }
+                            div.panel {
+                                padding: 0 18px;
+                                background-color: #91beebbb;
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: 0.6s ease-in-out;
+                                opacity: 0;
+                                .datos-p{
+                                    width: 90%;
+                                    margin-top: 10px;
+                                    margin-bottom: 20px;
+                                    margin-left: 5%;
+                                    margin-right: 5%;
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                    .altura-datos{
+                                        height: 20px;
+                                        .titulos-tabla{
+                                            padding: 5px;
+                                            font-size: 20px;
+                                            text-align: center;
+                                            color: white;
+                                            border: 2px solid white;
+                                            border-collapse: collapse;
+                                            background-color: #6da4dcae;
+                                        }
+                                        .datos-tabla{
+                                            padding: 5px;
+                                            font-size: 15px;
+                                            text-align: center;
+                                            color: white;
+                                            border: 2px solid white;
+                                            border-collapse: collapse;
+                                            background-color: #6da4dcae;
+                                        }
+                                        .datos-tabla-precio{
+                                            padding: 5px;
+                                            font-size: 15px;
+                                            text-align: center;
+                                            color: rgb(43, 132, 46);
+                                            border: 2px solid white;
+                                            border-collapse: collapse;
+                                            background-color: #6da4dcae;
+                                        }
+                                        .datos-tabla-precioT{
+                                            padding: 5px;
+                                            font-size: 20px;
+                                            text-align: center;
+                                            color: rgb(43, 132, 46);
+                                            font-weight: bold;
+                                            border: 2px solid white;
+                                            border-collapse: collapse;
+                                            background-color: #6da4dcae;
+                                        }
+                                        .datos-tabla-vacios{
+                                            padding: 5px;
+                                            font-size: 15px;
+                                            text-align: center;
+                                            color: rgb(255, 255, 255);
+                                            background-color: #ffffff00;
+                                    
+                                        }
+                                        .ancho{
+                                            width: 20px;
+                                        }
+                                    }
                                 }
                             }
-                        }
+                            div.panel.show {
+                                opacity: 1;
+                                max-height: 500px;
+                            }
                     }
-                    div.panel.show {
-                        opacity: 1;
-                        max-height: 500px;
+                    .imp-namec{
+                        grid-area: imp-namec;
+                        width: 90%;
+                        height: 90%;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
                     }
-                }
-                .imp-namec{
-                    grid-area: imp-namec;
-                    width: 90%;
-                    height: 90%;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .imp-apellidoc{
-                    grid-area: imp-apellidoc;
-                    width: 90%;
-                    height: 90%;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .imp-emailc{
-                    grid-area: imp-emailc;
-                    width: 90%;
-                    height: 90%;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .imp-telc{
-                    grid-area: imp-telc;
-                    width: 90% !important;
-                    height: 90% !important;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .imp-dirc{
-                    grid-area: imp-dirc;
-                    width: 90% !important;
-                    height: 90% !important;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .imp-depac{
-                    grid-area: imp-depac;
-                    width: 90% !important;
-                    height: 90% !important;
-                    margin-top: 5%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                }
-                .botones-formc{
-                    grid-area: botones-formc;
-                    width: 90%;
-                    height: 94%;
-                    margin-top: 1%;
-                    margin-bottom: 5%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    justify-content: center;
-                    justify-items: center;
-                    align-items: center;
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-                    grid-template-rows: 100%;
-                    grid-template-areas: 
-                    "btn-reset btn-submit";
-                        .btn{
-                            border-style: none;
-                        }
-                        .btn-submit{
-                            grid-area: btn-submit;
-                            color: $colorletrabtn;
-                            background-color: $colorbtnform !important;
-                        }
-                        .btn-submit:hover{
-                            transform: scale(0.9);
-                            background-color: $colorbtnformhover !important;
-                        }
-                        .btn-reset{
-                            grid-area: btn-reset;
-                            color: $colorletrabtn;
-                            background-color: $colorbtnform !important;
-                        }
-                        .btn-reset:hover{
-                            transform: scale(0.9);
-                            background-color: $colorbtnformhover !important;
-                        }
-                }
-                ::placeholder {
-                    color: white !important;
-                }
-        }
+                    .imp-apellidoc{
+                        grid-area: imp-apellidoc;
+                        width: 90%;
+                        height: 90%;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    .imp-emailc{
+                        grid-area: imp-emailc;
+                        width: 90%;
+                        height: 90%;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    .imp-telc{
+                        grid-area: imp-telc;
+                        width: 90% !important;
+                        height: 90% !important;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    .imp-dirc{
+                        grid-area: imp-dirc;
+                        width: 90% !important;
+                        height: 90% !important;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    .imp-depac{
+                        grid-area: imp-depac;
+                        width: 90% !important;
+                        height: 90% !important;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        display: flex;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    .botones-formc{
+                        grid-area: botones-formc;
+                        width: 90%;
+                        height: 94%;
+                        margin-top: 1%;
+                        margin-bottom: 5%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        justify-content: center;
+                        justify-items: center;
+                        align-items: center;
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows: 100%;
+                        grid-template-areas: 
+                        "btn-reset btn-submit";
+                            .btn{
+                                border-style: none;
+                            }
+                            .btn-submit{
+                                grid-area: btn-submit;
+                                color: $colorletrabtn;
+                                background-color: $colorbtnform !important;
+                            }
+                            .btn-submit:hover{
+                                transform: scale(0.9);
+                                background-color: $colorbtnformhover !important;
+                            }
+                            .btn-reset{
+                                grid-area: btn-reset;
+                                color: $colorletrabtn;
+                                background-color: $colorbtnform !important;
+                            }
+                            .btn-reset:hover{
+                                transform: scale(0.9);
+                                background-color: $colorbtnformhover !important;
+                            }
+                    }
+                    ::placeholder {
+                        color: white !important;
+                    }
+            }
     }
 }

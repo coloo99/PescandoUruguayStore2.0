@@ -61,7 +61,7 @@
             </div>
         </header>   
         <main class="main_contacto">
-            <form class="cont-formc">
+            <form class="cont-formc" id="form">
                 <div class="titulo-formc">
                     <h2>Datos de tu pedido</h2>
                 </div>
@@ -92,13 +92,17 @@
                     </table>
                   </div>
                 </div>
-
-
                 <div class="botones-formc">
                     <button type="reset" class="btn-reset btn btn-primary">Limpiar campos</button>
-                    <button data-swal-toast-template="#my-template" type="submit" id="enviar-pedido" class="btn-submit btn btn-primary">Realizar compra</button>
+                    <!-- <button data-swal-toast-template="#my-template" type="submit" id="enviar-pedido" class="btn-submit btn btn-primary">Realizar compra</button> -->
+                    <input data-swal-toast-template="#my-template" type="submit" id="enviar-pedido" class="btn-submit btn btn-primary" value="Realizar compra" >
                 </div>
             </form>
+            <!-- Scripts de Email JS -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+              emailjs.init('p6dbbddI3saxe9DBA')
+            </script>
         </main>
         <!--CARRITO DE COMPRAS-->
         <div class="modal-contenedor">
@@ -136,6 +140,7 @@
         <script src="../js/events.js"></script>
         <script src="../js/stock.js"></script>
         <script src="../js/carritoGlobal.js"></script>
+        <script src="../js/finalizarCompra.js"></script>
         <!--Botstrap scripts-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
