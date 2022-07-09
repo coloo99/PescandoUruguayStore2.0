@@ -218,6 +218,50 @@ body{
                         }
                     }
                 }
+                .loading {
+                    width: 100%;
+                    margin-top: 200px;
+                    margin-bottom: 200px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(255, 255, 255, 0);
+                    display:inline;
+                    justify-content: center;
+                    align-items: center;
+                    justify-items: center;
+                    transition: 1s all;
+                    opacity: 0;
+                }
+                .loading.show {
+                    opacity: 1;
+                }
+                .loading .cont-spin .spin {
+                    border: 3px solid hsla(185, 100%, 62%, 0.2);
+                    border-top-color: #38a6b0;
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    animation: spin 1s linear infinite;
+                }
+                .error{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                }
+                .cont-spin{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @keyframes spin {
+                  to {
+                    transform: rotate(360deg);
+                  }
+                }   
             }
     }
 }

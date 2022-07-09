@@ -7,6 +7,11 @@ const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
 const carritoPagar = document.getElementById('pagar');
 
 
+const contenedorCarrito = document.getElementById('carrito-contenedor');
+const finCompra = document.getElementById('fin-compra')
+const contadorCarrito = document.getElementById('contadorCarrito');
+const precioTotal = document.getElementById('precioTotal');
+
 carritoAbrir.addEventListener('click', ()=> {
     contenedorModal.classList.toggle('modal-active')
 })

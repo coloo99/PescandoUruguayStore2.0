@@ -16,6 +16,13 @@
     pointer-events: all;
 }
 
+.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+    background-color:rgba(255, 255, 255, 0) !important;
+}
+.swal2-icon.swal2-success .swal2-success-fix {
+    background-color:rgba(255, 255, 255, 0) !important;
+}
+
 /*//////Carrito///////*/
 .modal-contenedor {
     position: fixed;

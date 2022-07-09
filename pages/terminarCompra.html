@@ -8,8 +8,8 @@
         <meta name="description" content="Esta es una web diseñada para la venta de articulos para la pesca deportiva, siempre pensando en la buena calidad de los articulos para que el pescador pueda gozar de una buena pesca"/>
         <link rel="stylesheet" href="../css/estilos.css">
         <title>PescandoUruguayStore</title>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--Sweet Alert-->
         <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--Sweet Alert-->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -72,20 +72,28 @@
                     <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
                 </div>
                 <div class="imp-emailc">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu e-mail">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu e-mail" required>
                 </div>
                 <div class="imp-telc">
-                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu telefono">
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu telefono" required>
                 </div>
                 <div class="imp-dirc">
-                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingresa tu direccion">
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingresa tu direccion" required>
                 </div>
                 <div class="imp-depac">
-                    <input type="text" class="form-control" id="localidad" name="localidad" placeholder="Ingresa tu localidad">
+                    <input type="text" class="form-control" id="localidad" name="localidad" placeholder="Ingresa tu localidad" required>
                 </div>
-                <p id="datos-pedido" class="datos-p">
 
-                </p>
+                <div class="ticket">
+                  <button class="accordion" id="accordion" type="button">Ticket</button>
+                  <div class="panel">
+                    <table id="datos-pedido" class="datos-p">
+                      
+                    </table>
+                  </div>
+                </div>
+
+
                 <div class="botones-formc">
                     <button type="reset" class="btn-reset btn btn-primary">Limpiar campos</button>
                     <button data-swal-toast-template="#my-template" type="submit" id="enviar-pedido" class="btn-submit btn btn-primary">Realizar compra</button>
@@ -124,9 +132,10 @@
           </article>
       </footer>
         <!--Carrito scripts-->
+        <script src="../js/constructores.class.js"></script>
+        <script src="../js/events.js"></script>
         <script src="../js/stock.js"></script>
         <script src="../js/carritoGlobal.js"></script>
-        <script src="../js/events.js"></script>
         <!--Botstrap scripts-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

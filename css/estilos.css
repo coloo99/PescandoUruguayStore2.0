@@ -24,6 +24,12 @@
   background: rgba(255, 255, 255, 0.813) !important;
   pointer-events: all; }
 
+.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+  background-color: rgba(255, 255, 255, 0) !important; }
+
+.swal2-icon.swal2-success .swal2-success-fix {
+  background-color: rgba(255, 255, 255, 0) !important; }
+
 /*//////Carrito///////*/
 .modal-contenedor {
   position: fixed;
@@ -662,6 +668,44 @@ body {
             padding: 0% 0% 0% 0%; }
             body .main_productos #contenedor-productos .card .card-content .cantidad .cantidad-texto {
               text-align: center; }
+      body .main_productos #contenedor-productos .loading {
+        width: 100%;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        transition: 1s all;
+        opacity: 0; }
+      body .main_productos #contenedor-productos .loading.show {
+        opacity: 1; }
+      body .main_productos #contenedor-productos .loading .cont-spin .spin {
+        border: 3px solid rgba(61, 239, 255, 0.2);
+        border-top-color: #38a6b0;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        animation: spin 1s linear infinite; }
+      body .main_productos #contenedor-productos .error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold; }
+      body .main_productos #contenedor-productos .cont-spin {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
 
 .swal2-styled.swal2-confirm {
   border: 0;
@@ -1506,9 +1550,9 @@ body {
   .main_contacto .cont-formc {
     display: grid;
     padding-top: 80px;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px, 40px, 40px, 40px, 80px, 40px;
+    grid-template-rows: 50px, 40px, 40px, 40px, auto, 40px;
     grid-template-areas: "... titulo-formc titulo-formc ..." "... imp-namec imp-apellidoc ..." "... imp-emailc imp-telc ..." "... imp-dirc imp-depac ..." "... datos-p datos-p ..." "... botones-formc botones-formc ...";
     justify-content: center;
     justify-items: center;
@@ -1549,43 +1593,109 @@ body {
       margin-bottom: 2%;
       margin-left: 5%;
       margin-right: 5%;
-      background-color: #458dd6;
-      border-radius: 10% 10%;
       color: #0b4c71;
       display: flex;
       justify-content: center;
       justify-items: center;
       align-items: center; }
-    .main_contacto .cont-formc .datos-p {
+    .main_contacto .cont-formc .ticket {
       grid-area: datos-p;
-      display: flex;
-      justify-content: center;
-      justify-items: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgba(68, 65, 65, 0.548);
-      padding-left: 5px;
-      padding-right: 5px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px; }
-      .main_contacto .cont-formc .datos-p .datos-compra {
-        font-size: 20px;
+      width: 90%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%; }
+      .main_contacto .cont-formc .ticket button.accordion {
+        background-color: #87b0dabb;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 20%;
+        border: none;
         text-align: center;
-        color: white; }
-      .main_contacto .cont-formc .datos-p .ptotal {
-        font-size: 20px;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s; }
+      .main_contacto .cont-formc .ticket button.accordion.active, .main_contacto .cont-formc .ticket button.accordion:hover {
+        padding: 18px;
+        width: 100%;
+        border: none;
         text-align: center;
-        color: white;
-        background-color: red;
-        margin-left: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px; }
+        outline: none;
+        font-size: 15px;
+        background-color: #6b99c8bb; }
+      .main_contacto .cont-formc .ticket button.accordion:after {
+        content: '\02795';
+        font-size: 13px;
+        text-align: center;
+        color: rgba(119, 119, 119, 0.435);
+        float: right;
+        margin-left: 5px; }
+      .main_contacto .cont-formc .ticket button.accordion.active:after {
+        content: "\2796"; }
+      .main_contacto .cont-formc .ticket div.panel {
+        padding: 0 18px;
+        background-color: #91beebbb;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        opacity: 0; }
+        .main_contacto .cont-formc .ticket div.panel .datos-p {
+          width: 90%;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          margin-left: 5%;
+          margin-right: 5%;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px; }
+          .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos {
+            height: 20px; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .titulos-tabla {
+              padding: 5px;
+              font-size: 20px;
+              text-align: center;
+              color: white;
+              border: 2px solid white;
+              border-collapse: collapse;
+              background-color: #6da4dcae; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla {
+              padding: 5px;
+              font-size: 15px;
+              text-align: center;
+              color: white;
+              border: 2px solid white;
+              border-collapse: collapse;
+              background-color: #6da4dcae; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precio {
+              padding: 5px;
+              font-size: 15px;
+              text-align: center;
+              color: #2b842e;
+              border: 2px solid white;
+              border-collapse: collapse;
+              background-color: #6da4dcae; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precioT {
+              padding: 5px;
+              font-size: 20px;
+              text-align: center;
+              color: #2b842e;
+              font-weight: bold;
+              border: 2px solid white;
+              border-collapse: collapse;
+              background-color: #6da4dcae; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-vacios {
+              padding: 5px;
+              font-size: 15px;
+              text-align: center;
+              color: white;
+              background-color: #ffffff00; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .ancho {
+              width: 20px; }
+      .main_contacto .cont-formc .ticket div.panel.show {
+        opacity: 1;
+        max-height: 500px; }
     .main_contacto .cont-formc .imp-namec {
       grid-area: imp-namec;
       width: 90%;
@@ -1691,6 +1801,270 @@ body {
         background-color: #44a6c7 !important; }
     .main_contacto .cont-formc ::placeholder {
       color: white !important; }
+
+@media screen and (max-width: 1200px) {
+  .main_contacto {
+    background-color: #9ac4efbb; }
+    .main_contacto .cont-formc {
+      display: grid;
+      padding-top: 80px;
+      padding-bottom: 120px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 50px, 40px, 40px, 40px, auto, 40px;
+      grid-template-areas: "titulo-formc titulo-formc titulo-formc titulo-formc" "imp-namec imp-namec imp-apellidoc imp-apellidoc" "imp-emailc imp-emailc imp-telc imp-telc" "imp-dirc imp-dirc imp-depac imp-depac" "datos-p datos-p datos-p datos-p" "... botones-formc botones-formc ...";
+      justify-content: center;
+      justify-items: center;
+      align-items: center; }
+      .main_contacto .cont-formc input:not([type]), .main_contacto .cont-formc input[type=text], .main_contacto .cont-formc input[type=password], .main_contacto .cont-formc input[type=email], .main_contacto .cont-formc input[type=tel], .main_contacto .cont-formc input[type=number], .main_contacto .cont-formc input[type=search], .main_contacto .cont-formc textarea.materialize-textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #6da4dc;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        outline: none;
+        width: 90%;
+        height: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-size: 1rem;
+        padding: 0;
+        box-shadow: none;
+        box-sizing: content-box;
+        transition: all .3s; }
+      .main_contacto .cont-formc input:not([type]), .main_contacto .cont-formc input[type=text]::placeholder, .main_contacto .cont-formc input[type=email]::placeholder, .main_contacto .cont-formc input[type=tel]::placeholder, .main_contacto .cont-formc textarea.materialize-textarea::placeholder {
+        text-align: center; }
+      .main_contacto .cont-formc input:not([type]), .main_contacto .cont-formc input[type=text]:focus, .main_contacto .cont-formc input[type=email]:focus, .main_contacto .cont-formc input[type=tel]:focus, .main_contacto .cont-formc input[type=number]:focus, .main_contacto .cont-formc textarea.materialize-textarea:focus {
+        border-bottom: 2px solid #1c538a; }
+      .main_contacto .cont-formc .titulo-formc {
+        grid-area: titulo-formc;
+        width: 90%;
+        height: 50%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #0b4c71;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .ticket {
+        grid-area: datos-p;
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 5%; }
+        .main_contacto .cont-formc .ticket button.accordion {
+          background-color: #87b0dabb;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 20%;
+          margin-left: 30%;
+          margin-right: 30%;
+          border: none;
+          text-align: center;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s; }
+        .main_contacto .cont-formc .ticket button.accordion.active, .main_contacto .cont-formc .ticket button.accordion:hover {
+          padding: 18px;
+          width: 100%;
+          margin-left: 0%;
+          margin-right: 0%;
+          border: none;
+          text-align: center;
+          outline: none;
+          font-size: 15px;
+          background-color: #6994bfbb; }
+        .main_contacto .cont-formc .ticket button.accordion::after {
+          content: '\02795';
+          font-size: 13px;
+          text-align: center;
+          color: white;
+          float: right;
+          margin-left: 5px; }
+        .main_contacto .cont-formc .ticket button.accordion.active::after {
+          content: "\2796";
+          color: white;
+          /*Supuesto color del boton + */ }
+        .main_contacto .cont-formc .ticket div.panel {
+          padding: 0 18px;
+          background-color: #91beebbb;
+          max-height: 0;
+          overflow: hidden;
+          transition: 0.6s ease-in-out;
+          opacity: 0; }
+          .main_contacto .cont-formc .ticket div.panel .datos-p {
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; }
+            .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos {
+              height: 20px; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .titulos-tabla {
+                padding: 5px;
+                font-size: 20px;
+                text-align: center;
+                color: white;
+                border: 2px solid white;
+                border-collapse: collapse;
+                background-color: #6da4dcae; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla {
+                padding: 5px;
+                font-size: 15px;
+                text-align: center;
+                color: white;
+                border: 2px solid white;
+                border-collapse: collapse;
+                background-color: #6da4dcae; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precio {
+                padding: 5px;
+                font-size: 15px;
+                text-align: center;
+                color: #2b842e;
+                border: 2px solid white;
+                border-collapse: collapse;
+                background-color: #6da4dcae; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precioT {
+                padding: 5px;
+                font-size: 20px;
+                text-align: center;
+                color: #2b842e;
+                font-weight: bold;
+                border: 2px solid white;
+                border-collapse: collapse;
+                background-color: #6da4dcae; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-vacios {
+                padding: 5px;
+                font-size: 15px;
+                text-align: center;
+                color: white;
+                background-color: #ffffff00; }
+              .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .ancho {
+                width: 20px; }
+        .main_contacto .cont-formc .ticket div.panel.show {
+          opacity: 1;
+          max-height: 500px; }
+      .main_contacto .cont-formc .imp-namec {
+        grid-area: imp-namec;
+        width: 90%;
+        height: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .imp-apellidoc {
+        grid-area: imp-apellidoc;
+        width: 90%;
+        height: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .imp-emailc {
+        grid-area: imp-emailc;
+        width: 90%;
+        height: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .imp-telc {
+        grid-area: imp-telc;
+        width: 90% !important;
+        height: 90% !important;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .imp-dirc {
+        grid-area: imp-dirc;
+        width: 90% !important;
+        height: 90% !important;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .imp-depac {
+        grid-area: imp-depac;
+        width: 90% !important;
+        height: 90% !important;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; }
+      .main_contacto .cont-formc .botones-formc {
+        grid-area: botones-formc;
+        width: 90%;
+        height: 94%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100%;
+        grid-template-areas: "btn-reset btn-submit"; }
+        .main_contacto .cont-formc .botones-formc .btn {
+          border-style: none; }
+        .main_contacto .cont-formc .botones-formc .btn-submit {
+          grid-area: btn-submit;
+          color: white;
+          background-color: #308faf !important; }
+        .main_contacto .cont-formc .botones-formc .btn-submit:hover {
+          transform: scale(0.9);
+          background-color: #44a6c7 !important; }
+        .main_contacto .cont-formc .botones-formc .btn-reset {
+          grid-area: btn-reset;
+          color: white;
+          background-color: #308faf !important; }
+        .main_contacto .cont-formc .botones-formc .btn-reset:hover {
+          transform: scale(0.9);
+          background-color: #44a6c7 !important; }
+      .main_contacto .cont-formc ::placeholder {
+        color: white !important; } }
 
 .login-form {
   display: grid;
