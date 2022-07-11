@@ -36,7 +36,7 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #00000042;
+  background-color: #00000035;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,8 +45,8 @@
   visibility: hidden; }
   .modal-contenedor .modal-carrito {
     position: relative;
-    background-color: #2f77bed2;
-    border: 1px solid #175895;
+    background-color: #3e8cdad2;
+    border: 2px solid rgba(255, 255, 255, 0.726);
     min-width: 500px;
     max-width: 60%;
     margin-top: 0;
@@ -54,16 +54,17 @@
     margin-top: 0px;
     transition: all 0.5s; }
     .modal-contenedor .modal-carrito #carritoCerrar:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      color: #98c2ec; }
     .modal-contenedor .modal-carrito #carritoCerrar:focus {
       outline: none; }
     .modal-contenedor .modal-carrito #carritoCerrar {
       position: absolute;
       top: 15px;
-      right: 15px;
-      font-size: 20px;
-      color: #175895;
+      right: 25px;
+      font-size: 28px;
       border: none;
+      color: white;
       background-color: rgba(255, 255, 255, 0); }
     .modal-contenedor .modal-carrito h3 {
       padding-bottom: 5px;
@@ -81,7 +82,7 @@
       display: flex;
       justify-content: space-between; }
       .modal-contenedor .modal-carrito .productoEnCarrito p {
-        line-height: 1.8;
+        line-height: 2.6;
         color: white; }
       .modal-contenedor .modal-carrito .productoEnCarrito .boton-eliminar {
         background-color: rgba(255, 255, 255, 0);
@@ -101,6 +102,9 @@
       border-left: 5px solid #306fab;
       background-color: rgba(84, 149, 209, 0.698);
       cursor: pointer; }
+      .modal-contenedor .modal-carrito .productoEnCarrito:hover p {
+        line-height: 1.8;
+        margin-bottom: 0px; }
     .modal-contenedor .modal-carrito .precio-total {
       text-align: center;
       background-color: #2c649cd8;
@@ -112,6 +116,125 @@
       margin-right: 25%;
       padding-top: 5px;
       padding-bottom: 2px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px; }
+    .modal-contenedor .modal-carrito #precioTotal {
+      color: white;
+      font-size: 17px;
+      margin-right: 10px;
+      margin-bottom: 0px; }
+    .modal-contenedor .modal-carrito .img-pagar {
+      width: 45px;
+      height: 30px;
+      margin-bottom: 3px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 2px;
+      padding-bottom: 3px; }
+    .modal-contenedor .modal-carrito .pagar {
+      background-color: rgba(255, 255, 255, 0.131);
+      border: #ffffff00;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 4px;
+      padding-top: 2px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    .modal-contenedor .modal-carrito .pagar:hover {
+      background-color: rgba(255, 255, 255, 0.223);
+      border: #ffffff00;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 4px;
+      padding-top: 2px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+
+.modal-active {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  z-index: 5; }
+
+@media screen and (max-width: 600px) {
+  .modal-contenedor .modal-carrito {
+    background-color: #3e8cdad2;
+    border: 2px solid rgba(255, 255, 255, 0.726);
+    min-width: 90% !important;
+    max-width: 95% !important;
+    margin-top: 0;
+    padding: 20px;
+    margin-top: 0px;
+    transition: all 0.5s; }
+    .modal-contenedor .modal-carrito #carritoCerrar:hover {
+      cursor: pointer;
+      color: #98c2ec; }
+    .modal-contenedor .modal-carrito #carritoCerrar:focus {
+      outline: none;
+      color: #d7d7d7; }
+    .modal-contenedor .modal-carrito #carritoCerrar {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 28px;
+      color: white;
+      border: none;
+      background-color: rgba(255, 255, 255, 0); }
+    .modal-contenedor .modal-carrito h3 {
+      font-size: 25px;
+      padding-bottom: 5px;
+      color: white !important;
+      text-align: center; }
+    .modal-contenedor .modal-carrito .productoEnCarrito {
+      border-left: 5px solid #74afe7;
+      border-top: 1px solid #74afe7;
+      border-bottom: 1px solid #74afe7;
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      margin: 5px 0;
+      padding: 5px 10px;
+      height: 50px;
+      display: flex;
+      justify-content: space-between; }
+      .modal-contenedor .modal-carrito .productoEnCarrito p {
+        line-height: 2.6;
+        color: white; }
+      .modal-contenedor .modal-carrito .productoEnCarrito .boton-eliminar {
+        background-color: rgba(255, 255, 255, 0);
+        color: #ff6063;
+        border: none;
+        font-size: 20px; }
+      .modal-contenedor .modal-carrito .productoEnCarrito .boton-eliminar:hover {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #ff8183;
+        background-color: rgba(255, 255, 255, 0.435);
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px; }
+    .modal-contenedor .modal-carrito .productoEnCarrito:hover {
+      border-left: 5px solid #306fab;
+      background-color: rgba(84, 149, 209, 0.698);
+      cursor: pointer; }
+      .modal-contenedor .modal-carrito .productoEnCarrito:hover p {
+        line-height: 1.8; }
+    .modal-contenedor .modal-carrito .precio-total {
+      text-align: center;
+      background-color: #2c649cd8;
+      color: white;
+      font-size: 17px;
+      width: 80%;
+      margin-top: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-top: 5px;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -149,13 +272,7 @@
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px; }
-
-.modal-active {
-  width: 100%;
-  opacity: 1;
-  visibility: visible;
-  z-index: 5; }
+      border-bottom-right-radius: 10px; } }
 
 div.container {
   padding-left: 0px;
@@ -302,7 +419,7 @@ header div .row_header {
     /* background-color: map-get($colorbtn, colorbtnhover); */ }
   header div .row_header .btn:hover {
     transform: scale(0.9);
-    background-color: #44a6c7; }
+    background-color: #6597b6; }
   header div .row_header div ul.nav-css {
     margin-right: 20px !important; }
 
@@ -415,7 +532,7 @@ h2 {
 
 .titulocarrusel {
   text-align: center;
-  color: #0b4c71;
+  color: white;
   background-color: #5695d4af;
   border-top-left-radius: 15px !important;
   border-top-right-radius: 15px !important;
@@ -490,7 +607,7 @@ body {
     background-color: #9ac4efbb;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30px 50px 90%;
+    grid-template-rows: 35px 50px 90%;
     grid-template-areas: "..." "item" "contprod"; }
     body .main_productos .item {
       grid-area: item;
@@ -499,12 +616,13 @@ body {
       height: 100%;
       margin-left: 20%;
       margin-right: 20%;
-      color: #0b4c71;
+      padding-bottom: 10px;
+      padding-top: 3px;
       border-top-left-radius: 15px !important;
       border-top-right-radius: 15px !important;
-      border-bottom-left-radius: 0px !important;
-      border-bottom-right-radius: 0px !important;
-      background-color: #458dd6;
+      border-bottom-left-radius: 15px !important;
+      border-bottom-right-radius: 15px !important;
+      background-color: #5695d4af;
       color: white;
       display: flex;
       justify-content: center;
@@ -516,9 +634,8 @@ body {
       height: 100%;
       margin-left: 10%;
       margin-right: 10%;
-      margin-top: 1%;
-      background-color: #458dd6;
-      margin-bottom: 2%;
+      margin-top: 5%;
+      margin-bottom: 0%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -592,6 +709,7 @@ body {
             height: 100%; }
             body .main_productos #contenedor-productos .card .card-image .card-t .card-title {
               color: white;
+              font-weight: bold;
               display: flex;
               justify-content: center;
               justify-items: center;
@@ -637,7 +755,8 @@ body {
             justify-items: center;
             align-items: center; }
             body .main_productos #contenedor-productos .card .card-content .tipo .tipo-texto {
-              text-align: center; }
+              text-align: center;
+              color: white; }
           body .main_productos #contenedor-productos .card .card-content .desc {
             display: flex !important;
             grid-area: desc;
@@ -646,7 +765,8 @@ body {
             justify-items: center;
             align-items: center; }
             body .main_productos #contenedor-productos .card .card-content .desc .desc-texto {
-              text-align: center; }
+              text-align: center;
+              color: white; }
           body .main_productos #contenedor-productos .card .card-content .precio {
             display: flex !important;
             grid-area: precio;
@@ -656,7 +776,8 @@ body {
             justify-items: center;
             align-items: center; }
             body .main_productos #contenedor-productos .card .card-content .precio .precio-texto {
-              text-align: center; }
+              text-align: center;
+              color: white; }
           body .main_productos #contenedor-productos .card .card-content .cantidad {
             display: flex !important;
             grid-area: cantidad;
@@ -667,7 +788,8 @@ body {
             align-items: center;
             padding: 0% 0% 0% 0%; }
             body .main_productos #contenedor-productos .card .card-content .cantidad .cantidad-texto {
-              text-align: center; }
+              text-align: center;
+              color: white; }
       body .main_productos #contenedor-productos .loading {
         width: 100%;
         margin-top: 200px;
@@ -1126,18 +1248,20 @@ body {
 .index_grid_prov {
   background-color: #9ac4efbb !important; }
   .index_grid_prov .titulo-prov {
-    width: 50%;
+    width: 60%;
     height: 100%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 5%;
-    padding-bottom: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 3px;
     color: #0b4c71;
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
     border-bottom-left-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
-    background-color: #74a6d97c;
+    background-color: #5695d4af;
     color: white;
     display: flex;
     justify-content: center;
@@ -1164,6 +1288,9 @@ body {
         justify-items: center;
         margin-top: 20px !important;
         background-color: #9ac4ef00 !important; }
+        .index_grid_prov .cont_prov div.row_prov .col_prov .border {
+          border: 3px solid #5c94bd !important;
+          box-shadow: 0 0 5px rgba(4, 8, 27, 0.797) !important; }
         .index_grid_prov .cont_prov div.row_prov .col_prov .mapa_prov {
           width: 100%;
           height: 100%; }
@@ -1172,7 +1299,7 @@ body {
         .index_grid_prov .cont_prov div.row_prov .col_prov .boton_prov {
           margin-top: 5px;
           box-shadow: 0 0 5px rgba(4, 8, 27, 0.797) !important;
-          background-color: #308faf !important;
+          background-color: #497ea0 !important;
           color: white !important;
           display: flex;
           text-align: center;
@@ -1180,7 +1307,7 @@ body {
           align-items: center; }
         .index_grid_prov .cont_prov div.row_prov .col_prov .boton_prov:hover {
           transform: scale(0.9) !important;
-          background-color: #44a6c7 !important; }
+          background-color: #6597b6 !important; }
 
 @media screen and (max-width: 625px) {
   .titulo-prov {
@@ -1199,6 +1326,8 @@ body {
 .main_contacto {
   background-color: #9ac4efbb; }
   .main_contacto .cont-form {
+    padding-top: 0px;
+    padding-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px,40px,40px,30px,150px,40px;
@@ -1360,17 +1489,17 @@ body {
       .main_contacto .cont-form .botones-form .btn-submit {
         grid-area: btn-submit;
         color: white;
-        background-color: #308faf !important; }
+        background-color: #497ea0 !important; }
       .main_contacto .cont-form .botones-form .btn-submit:hover {
         transform: scale(0.9);
-        background-color: #44a6c7 !important; }
+        background-color: #6597b6 !important; }
       .main_contacto .cont-form .botones-form .btn-reset {
         grid-area: btn-reset;
         color: white;
-        background-color: #308faf !important; }
+        background-color: #497ea0 !important; }
       .main_contacto .cont-form .botones-form .btn-reset:hover {
         transform: scale(0.9);
-        background-color: #44a6c7 !important; }
+        background-color: #6597b6 !important; }
     .main_contacto .cont-form ::placeholder {
       color: white !important; }
 
@@ -1378,6 +1507,8 @@ body {
   .main_contacto {
     background-color: #5695d4af; }
     .main_contacto .cont-form {
+      padding-top: 40px;
+      padding-bottom: 60px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 1fr), 30px, 30px, 100px, 40px;
@@ -1466,6 +1597,8 @@ body {
   .main_contacto {
     background-color: #5695d4af; }
     .main_contacto .cont-form {
+      padding-top: 40px;
+      padding-bottom: 80px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 1fr), 30px, 30px, 100px, 40px;
@@ -1492,7 +1625,7 @@ body {
         width: 70%;
         height: 40%;
         margin-top: 5%;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
         margin-left: 15%;
         margin-right: 15%;
         border-radius: 10% 10%;
@@ -1505,7 +1638,7 @@ body {
         grid-area: imp-name;
         width: 90%;
         height: 90%;
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: 5%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1517,7 +1650,7 @@ body {
         grid-area: imp-apellido;
         width: 90%;
         height: 90%;
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: 5%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1529,7 +1662,7 @@ body {
         grid-area: imp-email;
         width: 90%;
         height: 90%;
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: 5%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1541,7 +1674,7 @@ body {
         grid-area: imp-tel;
         width: 90%;
         height: 90%;
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: 5%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1611,42 +1744,49 @@ body {
       margin-left: 5%;
       margin-right: 5%; }
       .main_contacto .cont-formc .ticket button.accordion {
-        background-color: #87b0dabb;
-        color: #444;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: #6b99c8bb;
+        color: white;
         cursor: pointer;
-        padding: 18px;
-        width: 20%;
-        border: none;
-        text-align: center;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s; }
-      .main_contacto .cont-formc .ticket button.accordion.active, .main_contacto .cont-formc .ticket button.accordion:hover {
-        padding: 18px;
+        /* padding: 18px; */
         width: 100%;
         border: none;
         text-align: center;
         outline: none;
-        font-size: 15px;
-        background-color: #6b99c8bb; }
-      .main_contacto .cont-formc .ticket button.accordion:after {
-        content: '\02795';
-        font-size: 13px;
+        font-size: 20px;
+        transition: 0.4s; }
+      .main_contacto .cont-formc .ticket button.accordion.active, .main_contacto .cont-formc .ticket button.accordion:hover {
+        /* padding: 18px; */
+        width: 100%;
+        border: none;
         text-align: center;
-        color: rgba(119, 119, 119, 0.435);
+        outline: none;
+        font-size: 25px;
+        background-color: #87b0dabb; }
+      .main_contacto .cont-formc .ticket button.accordion:after {
+        /* content: '\02795'; */
+        font-size: 25px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.435);
         float: right;
         margin-left: 5px; }
       .main_contacto .cont-formc .ticket button.accordion.active:after {
-        content: "\2796"; }
+        /* content: "\2796"; */ }
       .main_contacto .cont-formc .ticket div.panel {
-        padding: 0 18px;
+        margin-top: 10px;
+        /* padding: 0 18px; */
         background-color: #91beebbb;
-        max-height: 0;
+        max-height: 95%;
         overflow: hidden;
         transition: 0.6s ease-in-out;
         opacity: 0; }
         .main_contacto .cont-formc .ticket div.panel .datos-p {
           width: 90%;
+          max-width: 90%;
+          min-width: 30%;
           margin-top: 10px;
           margin-bottom: 20px;
           margin-left: 5%;
@@ -1662,9 +1802,11 @@ body {
               font-size: 20px;
               text-align: center;
               color: white;
-              border: 2px solid white;
-              border-collapse: collapse;
-              background-color: #6da4dcae; }
+              background-color: #85858596;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px; }
             .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla {
               padding: 5px;
               font-size: 15px;
@@ -1672,7 +1814,7 @@ body {
               color: white;
               border: 2px solid white;
               border-collapse: collapse;
-              background-color: #6da4dcae; }
+              background-color: #adadadae; }
             .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precio {
               padding: 5px;
               font-size: 15px;
@@ -1680,7 +1822,7 @@ body {
               color: #2b842e;
               border: 2px solid white;
               border-collapse: collapse;
-              background-color: #6da4dcae; }
+              background-color: #adadadae; }
             .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precioT {
               padding: 5px;
               font-size: 20px;
@@ -1689,7 +1831,7 @@ body {
               font-weight: bold;
               border: 2px solid white;
               border-collapse: collapse;
-              background-color: #6da4dcae; }
+              background-color: #adadadae; }
             .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-vacios {
               padding: 5px;
               font-size: 15px;
@@ -1793,21 +1935,21 @@ body {
       .main_contacto .cont-formc .botones-formc .btn-submit {
         grid-area: btn-submit;
         color: white;
-        background-color: #308faf !important; }
+        background-color: #497ea0 !important; }
       .main_contacto .cont-formc .botones-formc .btn-submit:hover {
         transform: scale(0.9);
-        background-color: #44a6c7 !important; }
+        background-color: #6597b6 !important; }
       .main_contacto .cont-formc .botones-formc .btn-reset {
         grid-area: btn-reset;
         color: white;
-        background-color: #308faf !important; }
+        background-color: #497ea0 !important; }
       .main_contacto .cont-formc .botones-formc .btn-reset:hover {
         transform: scale(0.9);
-        background-color: #44a6c7 !important; }
+        background-color: #6597b6 !important; }
     .main_contacto .cont-formc ::placeholder {
       color: white !important; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .main_contacto {
     background-color: #9ac4efbb; }
     .main_contacto .cont-formc {
@@ -1816,33 +1958,13 @@ body {
       padding-bottom: 120px;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 50px, 40px, 40px, 40px, auto, 40px;
-      grid-template-areas: "titulo-formc titulo-formc titulo-formc titulo-formc" "imp-namec imp-namec imp-apellidoc imp-apellidoc" "imp-emailc imp-emailc imp-telc imp-telc" "imp-dirc imp-dirc imp-depac imp-depac" "datos-p datos-p datos-p datos-p" "... botones-formc botones-formc ...";
+      grid-template-areas: "titulo-formc titulo-formc titulo-formc titulo-formc" "imp-namec imp-namec imp-apellidoc imp-apellidoc" "imp-emailc imp-emailc imp-telc imp-telc" "imp-dirc imp-dirc imp-depac imp-depac" "datos-p datos-p datos-p datos-p" "botones-formc botones-formc botones-formc botones-formc";
       justify-content: center;
       justify-items: center;
       align-items: center; }
       .main_contacto .cont-formc input:not([type]), .main_contacto .cont-formc input[type=text], .main_contacto .cont-formc input[type=password], .main_contacto .cont-formc input[type=email], .main_contacto .cont-formc input[type=tel], .main_contacto .cont-formc input[type=number], .main_contacto .cont-formc input[type=search], .main_contacto .cont-formc textarea.materialize-textarea {
         background-color: transparent;
-        border: none;
         border-bottom: 2px solid #6da4dc;
-        border-top-left-radius: 10px !important;
-        border-top-right-radius: 10px !important;
-        border-bottom-left-radius: 10px !important;
-        border-bottom-right-radius: 10px !important;
-        outline: none;
-        width: 90%;
-        height: 50%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 5%;
-        margin-right: 5%;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        font-size: 1rem;
-        padding: 0;
-        box-shadow: none;
-        box-sizing: content-box;
         transition: all .3s; }
       .main_contacto .cont-formc input:not([type]), .main_contacto .cont-formc input[type=text]::placeholder, .main_contacto .cont-formc input[type=email]::placeholder, .main_contacto .cont-formc input[type=tel]::placeholder, .main_contacto .cont-formc textarea.materialize-textarea::placeholder {
         text-align: center; }
@@ -1869,48 +1991,47 @@ body {
         margin-left: 5%;
         margin-right: 5%; }
         .main_contacto .cont-formc .ticket button.accordion {
-          background-color: #87b0dabb;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background-color: #6b99c8bb;
           color: white;
           cursor: pointer;
-          padding: 18px;
-          width: 20%;
-          margin-left: 30%;
-          margin-right: 30%;
+          /* padding: 18px; */
+          width: 100%;
           border: none;
           text-align: center;
           outline: none;
-          font-size: 15px;
+          font-size: 20px;
           transition: 0.4s; }
         .main_contacto .cont-formc .ticket button.accordion.active, .main_contacto .cont-formc .ticket button.accordion:hover {
-          padding: 18px;
+          /* padding: 18px; */
           width: 100%;
-          margin-left: 0%;
-          margin-right: 0%;
           border: none;
           text-align: center;
           outline: none;
-          font-size: 15px;
-          background-color: #6994bfbb; }
-        .main_contacto .cont-formc .ticket button.accordion::after {
-          content: '\02795';
-          font-size: 13px;
+          font-size: 25px;
+          background-color: #87b0dabb; }
+        .main_contacto .cont-formc .ticket button.accordion:after {
+          font-size: 25px;
           text-align: center;
           color: white;
           float: right;
           margin-left: 5px; }
-        .main_contacto .cont-formc .ticket button.accordion.active::after {
-          content: "\2796";
-          color: white;
-          /*Supuesto color del boton + */ }
+        .main_contacto .cont-formc .ticket button.accordion.active:after {
+          color: white; }
         .main_contacto .cont-formc .ticket div.panel {
-          padding: 0 18px;
+          margin-top: 10px;
           background-color: #91beebbb;
-          max-height: 0;
+          max-height: 95%;
           overflow: hidden;
           transition: 0.6s ease-in-out;
           opacity: 0; }
           .main_contacto .cont-formc .ticket div.panel .datos-p {
             width: 90%;
+            max-width: 90%;
+            min-width: 30%;
             margin-top: 10px;
             margin-bottom: 20px;
             margin-left: 5%;
@@ -1923,40 +2044,42 @@ body {
               height: 20px; }
               .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .titulos-tabla {
                 padding: 5px;
-                font-size: 20px;
+                font-size: 17px;
                 text-align: center;
                 color: white;
-                border: 2px solid white;
-                border-collapse: collapse;
-                background-color: #6da4dcae; }
+                background-color: #85858596;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px; }
               .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla {
                 padding: 5px;
-                font-size: 15px;
+                font-size: 12px;
                 text-align: center;
                 color: white;
                 border: 2px solid white;
                 border-collapse: collapse;
-                background-color: #6da4dcae; }
+                background-color: #adadadae; }
               .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precio {
                 padding: 5px;
-                font-size: 15px;
+                font-size: 12px;
                 text-align: center;
                 color: #2b842e;
                 border: 2px solid white;
                 border-collapse: collapse;
-                background-color: #6da4dcae; }
+                background-color: #adadadae; }
               .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-precioT {
                 padding: 5px;
-                font-size: 20px;
+                font-size: 17px;
                 text-align: center;
                 color: #2b842e;
                 font-weight: bold;
                 border: 2px solid white;
                 border-collapse: collapse;
-                background-color: #6da4dcae; }
+                background-color: #adadadae; }
               .main_contacto .cont-formc .ticket div.panel .datos-p .altura-datos .datos-tabla-vacios {
                 padding: 5px;
-                font-size: 15px;
+                font-size: 12px;
                 text-align: center;
                 color: white;
                 background-color: #ffffff00; }
@@ -1964,7 +2087,11 @@ body {
                 width: 20px; }
         .main_contacto .cont-formc .ticket div.panel.show {
           opacity: 1;
-          max-height: 500px; }
+          max-height: 500px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px; }
       .main_contacto .cont-formc .imp-namec {
         grid-area: imp-namec;
         width: 90%;
@@ -2057,17 +2184,17 @@ body {
         .main_contacto .cont-formc .botones-formc .btn-submit {
           grid-area: btn-submit;
           color: white;
-          background-color: #308faf !important; }
+          background-color: #497ea0 !important; }
         .main_contacto .cont-formc .botones-formc .btn-submit:hover {
           transform: scale(0.9);
-          background-color: #44a6c7 !important; }
+          background-color: #6597b6 !important; }
         .main_contacto .cont-formc .botones-formc .btn-reset {
           grid-area: btn-reset;
           color: white;
-          background-color: #308faf !important; }
+          background-color: #497ea0 !important; }
         .main_contacto .cont-formc .botones-formc .btn-reset:hover {
           transform: scale(0.9);
-          background-color: #44a6c7 !important; }
+          background-color: #6597b6 !important; }
       .main_contacto .cont-formc ::placeholder {
         color: white !important; } }
 
@@ -2120,13 +2247,13 @@ body {
     .login-form .btn-login .btn {
       box-shadow: 0 0 5px rgba(4, 8, 27, 0.797);
       color: white !important;
-      background-color: #308faf;
+      background-color: #497ea0;
       border-style: none;
       margin-left: 2%;
       margin-right: 2%; }
     .login-form .btn-login .btn:hover {
       transform: scale(0.9);
-      background-color: #44a6c7; }
+      background-color: #6597b6; }
   .login-form .regist-log {
     grid-area: regist-log;
     display: flex;
@@ -2223,13 +2350,13 @@ body {
     .reg-form .btn-reg .btn {
       box-shadow: 0 0 5px rgba(4, 8, 27, 0.797);
       color: white !important;
-      background-color: #308faf;
+      background-color: #497ea0;
       border-style: none;
       margin-left: 2%;
       margin-right: 2%; }
     .reg-form .btn-reg .btn:hover {
       transform: scale(0.9);
-      background-color: #44a6c7; }
+      background-color: #6597b6; }
   .reg-form .imp-reg {
     /*Estilos de los campos imput*/
     width: 46%;

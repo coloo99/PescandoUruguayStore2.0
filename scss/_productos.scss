@@ -6,7 +6,7 @@ body{
         background-color: $colorbody2;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 30px 50px 90%;
+        grid-template-rows: 35px 50px 90%;
         grid-template-areas: 
         "..."
         "item"
@@ -18,12 +18,13 @@ body{
                 height: 100%;
                 margin-left: 20%;
                 margin-right: 20%;
-                color: $colorfooterfin;
+                padding-bottom: 10px;
+                padding-top: 3px;
                 border-top-left-radius: 15px !important;
                 border-top-right-radius: 15px !important;
-                border-bottom-left-radius: 0px !important;
-                border-bottom-right-radius: 0px !important;
-                background-color: $colorheader;
+                border-bottom-left-radius: 15px !important;
+                border-bottom-right-radius: 15px !important;
+                background-color: $colorbody;
                 color: white;
                 display: flex;
                 justify-content: center;
@@ -36,9 +37,8 @@ body{
                 height: 100%;
                 margin-left: 10%;
                 margin-right: 10%;
-                margin-top: 1%;
-                background-color: $colorheader;
-                margin-bottom: 2%;
+                margin-top: 5%;
+                margin-bottom: 0%;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
@@ -124,6 +124,7 @@ body{
                             
                             .card-title{
                                 color: rgb(255, 255, 255);
+                                font-weight: bold;
                                 display: flex;
                                 justify-content: center;
                                 justify-items: center;
@@ -131,7 +132,6 @@ body{
                                 text-align: center;
                                 font-size: 20px;
                                 text-decoration: double solid;
-                                
                                 width: 90%;
                                 padding: 0px;
                                 margin-left: 0%;
@@ -178,6 +178,7 @@ body{
                             align-items: center;
                             .tipo-texto{
                                 text-align: center;
+                                color: white;
                             }
                         }
                         .desc{
@@ -189,6 +190,7 @@ body{
                             align-items: center;
                             .desc-texto{
                                 text-align: center;
+                                color: white;
                             }
                         }
                         .precio{
@@ -201,6 +203,7 @@ body{
                             align-items: center;
                             .precio-texto{
                                 text-align: center;
+                                color: white;
                             }
                         }
                         .cantidad{
@@ -214,6 +217,7 @@ body{
                             padding: 0% 0% 0% 0%;
                             .cantidad-texto{
                                 text-align: center;
+                                color: white;
                             }
                         }
                     }

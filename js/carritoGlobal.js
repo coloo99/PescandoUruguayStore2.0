@@ -14,7 +14,7 @@ const alertarSuccess = (titulo, mensaje)=> { /*Alerta sastifactorio al agregar y
         showConfirmButton: false,
         toast: true,
         position: 'top-end',
-        timer: 1000,
+        timer: 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -233,14 +233,13 @@ datosConsulta = JSON.parse(localStorage.getItem('consulta'))
 if(datosConsulta != null && datosConsulta.length != 0){
     emailjs.send("service_mvoq7l7","template_3uentfi",{
         namec: datosConsulta[0].nombre,
-        apellidoc: datosConsulta[0].apellido,
-        emailc: datosConsulta[0].email,
-        telefonoc: datosConsulta[0].telefono,
         consulta: datosConsulta[0].consulta,
+        email: datosConsulta[0].email,
     });
     consulta = []
     localStorage.setItem('consulta', JSON.stringify(consulta));
+    alertarSuccess("Consulta realizada con exito!", "Se procesara su consulta y le responderemos a la brevedad")
     setTimeout(function(){
         window.location.replace("../index.html");
-    }, 1500);
+    }, 2000);
 }

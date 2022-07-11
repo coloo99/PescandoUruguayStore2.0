@@ -69,106 +69,116 @@
                     margin-left: 5%;
                     margin-right: 5%;
                         button.accordion {
-                            background-color: #87b0dabb;
-                            color: #444;
+                            border-top-left-radius: 15px;
+                            border-top-right-radius: 15px;
+                            border-bottom-left-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            background-color: #6b99c8bb;
+                            color: rgb(255, 255, 255);
                             cursor: pointer;
-                            padding: 18px;
-                            width: 20%;
-                            border: none;
-                            text-align: center;
-                            outline: none;
-                            font-size: 15px;
-                            transition: 0.4s;
-                        }
-                        button.accordion.active, button.accordion:hover {
-                            padding: 18px;
+                            /* padding: 18px; */
                             width: 100%;
                             border: none;
                             text-align: center;
                             outline: none;
-                            font-size: 15px;
-                            background-color: #6b99c8bb;
+                            font-size: 20px;
+                            transition: 0.4s;
+                        }
+                        button.accordion.active, button.accordion:hover {
+                            /* padding: 18px; */
+                            width: 100%;
+                            border: none;
+                            text-align: center;
+                            outline: none;
+                            font-size: 25px;
+                            background-color: #87b0dabb;
                         }
                         button.accordion:after {
-                            content: '\02795';
-                            font-size: 13px;
+                            /* content: '\02795'; */
+                            font-size: 25px;
                             text-align: center;
-                            color: rgba(119, 119, 119, 0.435);
+                            color: rgba(255, 255, 255, 0.435);
                             float: right;
                             margin-left: 5px;
                         }
                         button.accordion.active:after {
-                            content: "\2796";
+                            /* content: "\2796"; */
                         }
                         div.panel {
-                            padding: 0 18px;
+                            margin-top: 10px;
+                            /* padding: 0 18px; */
                             background-color: #91beebbb;
-                            max-height: 0;
+                            max-height: 95%;
                             overflow: hidden;
                             transition: 0.6s ease-in-out;
                             opacity: 0;
-                                .datos-p{
-                                    width: 90%;
-                                    margin-top: 10px;
-                                    margin-bottom: 20px;
-                                    margin-left: 5%;
-                                    margin-right: 5%;
-                                    border-top-left-radius: 10px;
-                                    border-top-right-radius: 10px;
-                                    border-bottom-left-radius: 10px;
-                                    border-bottom-right-radius: 10px;
-                                        .altura-datos{
-                                            height: 20px;
-                                                .titulos-tabla{
-                                                    padding: 5px;
-                                                    font-size: 20px;
-                                                    text-align: center;
-                                                    color: white;
-                                                    border: 2px solid white;
-                                                    border-collapse: collapse;
-                                                    background-color: #6da4dcae;
-                                                }
-                                                .datos-tabla{
-                                                    padding: 5px;
-                                                    font-size: 15px;
-                                                    text-align: center;
-                                                    color: white;
-                                                    border: 2px solid white;
-                                                    border-collapse: collapse;
-                                                    background-color: #6da4dcae;
-                                                }
-                                                .datos-tabla-precio{
-                                                    padding: 5px;
-                                                    font-size: 15px;
-                                                    text-align: center;
-                                                    color: rgb(43, 132, 46);
-                                                    border: 2px solid white;
-                                                    border-collapse: collapse;
-                                                    background-color: #6da4dcae;
-                                                }
-                                                .datos-tabla-precioT{
-                                                    padding: 5px;
-                                                    font-size: 20px;
-                                                    text-align: center;
-                                                    color: rgb(43, 132, 46);
-                                                    font-weight: bold;
-                                                    border: 2px solid white;
-                                                    border-collapse: collapse;
-                                                    background-color: #6da4dcae;
-                                                }
-                                                .datos-tabla-vacios{
-                                                    padding: 5px;
-                                                    font-size: 15px;
-                                                    text-align: center;
-                                                    color: rgb(255, 255, 255);
-                                                    background-color: #ffffff00;
-                                            
-                                                }
-                                                .ancho{
-                                                    width: 20px;
-                                                }
-                                        }
+                            .datos-p{
+                                width: 90%;
+                                max-width: 90%;
+                                min-width: 30%;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                margin-left: 5%;
+                                margin-right: 5%;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                .altura-datos{
+                                    height: 20px;
+                                    .titulos-tabla{
+                                        padding: 5px;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        color: white;
+                                      
+                                        background-color: #85858596;
+                                        border-top-left-radius: 20px;
+                                        border-top-right-radius: 20px;
+                                        border-bottom-left-radius: 20px;
+                                        border-bottom-right-radius: 20px;
+                                    }
+                                    .datos-tabla{
+                                        padding: 5px;
+                                        font-size: 15px;
+                                        text-align: center;
+                                        color: white;
+                                        border: 2px solid white;
+                                        border-collapse: collapse;
+                                        background-color: #adadadae;
+                                    }
+                                    .datos-tabla-precio{
+                                        padding: 5px;
+                                        font-size: 15px;
+                                        text-align: center;
+                                        color: rgb(43, 132, 46);
+                                        border: 2px solid white;
+                                        border-collapse: collapse;
+                                        background-color: #adadadae;
+                                    }
+                                    .datos-tabla-precioT{
+                                        padding: 5px;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        color: rgb(43, 132, 46);
+                                        font-weight: bold;
+                                        border: 2px solid white;
+                                        border-collapse: collapse;
+                                        background-color: #adadadae;
+                                    }
+                                    .datos-tabla-vacios{
+                                        padding: 5px;
+                                        font-size: 15px;
+                                        text-align: center;
+                                        color: rgb(255, 255, 255);
+                                        background-color: #ffffff00;
+                                
+                                    }
+                                    .ancho{
+                                        width: 20px;
+                                    }
                                 }
+                            }
                         }
                         div.panel.show {
                             opacity: 1;
@@ -298,7 +308,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     .main_contacto {
         background-color: $colorbody2;
             .cont-formc {
@@ -313,33 +323,13 @@
                 "imp-emailc imp-emailc imp-telc imp-telc"
                 "imp-dirc imp-dirc imp-depac imp-depac"
                 "datos-p datos-p datos-p datos-p"
-                "... botones-formc botones-formc ...";
+                "botones-formc botones-formc botones-formc botones-formc";
                 justify-content: center;
                 justify-items: center;
                 align-items: center;
                     input:not([type]), input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
                         background-color: transparent;
-                        border: none;
                         border-bottom: 2px solid #6da4dc;
-                        border-top-left-radius: 10px !important;
-                        border-top-right-radius: 10px !important;
-                        border-bottom-left-radius: 10px !important;
-                        border-bottom-right-radius: 10px !important;
-                        outline: none;
-                        width: 90%;
-                        height: 50%;
-                        margin-top: 5%;
-                        margin-bottom: 5%;
-                        margin-left: 5%;
-                        margin-right: 5%;
-                        display: flex;
-                        justify-content: center;
-                        justify-items: center;
-                        align-items: center;
-                        font-size: 1rem;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
                         transition: all .3s;
                     }
                     input:not([type]), input[type=text]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder, textarea.materialize-textarea::placeholder{ 
@@ -370,51 +360,51 @@
                         margin-left: 5%;
                         margin-right: 5%;
                             button.accordion {
-                                background-color: #87b0dabb;
+                                border-top-left-radius: 15px;
+                                border-top-right-radius: 15px;
+                                border-bottom-left-radius: 15px;
+                                border-bottom-right-radius: 15px;
+                                background-color: #6b99c8bb;
                                 color: rgb(255, 255, 255);
                                 cursor: pointer;
-                                padding: 18px;
-                                width: 20%;
-                                margin-left: 30%;
-                                margin-right: 30%;
+                                /* padding: 18px; */
+                                width: 100%;
                                 border: none;
                                 text-align: center;
                                 outline: none;
-                                font-size: 15px;
+                                font-size: 20px;
                                 transition: 0.4s;
                             }
                             button.accordion.active, button.accordion:hover {
-                                padding: 18px;
+                                /* padding: 18px; */
                                 width: 100%;
-                                margin-left: 0%;
-                                margin-right: 0%;
                                 border: none;
                                 text-align: center;
                                 outline: none;
-                                font-size: 15px;
-                                background-color: #6994bfbb;
+                                font-size: 25px;
+                                background-color: #87b0dabb;
                             }
-                            button.accordion::after {
-                                content: '\02795';
-                                font-size: 13px;
+                            button.accordion:after {
+                                font-size: 25px;
                                 text-align: center;
                                 color: rgb(255, 255, 255);
                                 float: right;
                                 margin-left: 5px;
                             }
-                            button.accordion.active::after {
-                                content: "\2796";
-                                color: white; /*Supuesto color del boton + */
+                            button.accordion.active:after {
+                                color: rgb(255, 255, 255);
                             }
                             div.panel {
-                                padding: 0 18px;
+                                margin-top: 10px;
                                 background-color: #91beebbb;
-                                max-height: 0;
+                                max-height: 95%;
                                 overflow: hidden;
                                 transition: 0.6s ease-in-out;
                                 opacity: 0;
                                 .datos-p{
                                     width: 90%;
+                                    max-width: 90%;
+                                    min-width: 30%;
                                     margin-top: 10px;
                                     margin-bottom: 20px;
                                     margin-left: 5%;
@@ -427,44 +417,47 @@
                                         height: 20px;
                                         .titulos-tabla{
                                             padding: 5px;
-                                            font-size: 20px;
+                                            font-size: 17px;
                                             text-align: center;
                                             color: white;
-                                            border: 2px solid white;
-                                            border-collapse: collapse;
-                                            background-color: #6da4dcae;
+                                          
+                                            background-color: #85858596;
+                                            border-top-left-radius: 20px;
+                                            border-top-right-radius: 20px;
+                                            border-bottom-left-radius: 20px;
+                                            border-bottom-right-radius: 20px;
                                         }
                                         .datos-tabla{
                                             padding: 5px;
-                                            font-size: 15px;
+                                            font-size: 12px;
                                             text-align: center;
                                             color: white;
                                             border: 2px solid white;
                                             border-collapse: collapse;
-                                            background-color: #6da4dcae;
+                                            background-color: #adadadae;
                                         }
                                         .datos-tabla-precio{
                                             padding: 5px;
-                                            font-size: 15px;
+                                            font-size: 12px;
                                             text-align: center;
                                             color: rgb(43, 132, 46);
                                             border: 2px solid white;
                                             border-collapse: collapse;
-                                            background-color: #6da4dcae;
+                                            background-color: #adadadae;
                                         }
                                         .datos-tabla-precioT{
                                             padding: 5px;
-                                            font-size: 20px;
+                                            font-size: 17px;
                                             text-align: center;
                                             color: rgb(43, 132, 46);
                                             font-weight: bold;
                                             border: 2px solid white;
                                             border-collapse: collapse;
-                                            background-color: #6da4dcae;
+                                            background-color: #adadadae;
                                         }
                                         .datos-tabla-vacios{
                                             padding: 5px;
-                                            font-size: 15px;
+                                            font-size: 12px;
                                             text-align: center;
                                             color: rgb(255, 255, 255);
                                             background-color: #ffffff00;
@@ -479,6 +472,10 @@
                             div.panel.show {
                                 opacity: 1;
                                 max-height: 500px;
+                                border-top-left-radius: 15px;
+                                border-top-right-radius: 15px;
+                                border-bottom-left-radius: 15px;
+                                border-bottom-right-radius: 15px;
                             }
                     }
                     .imp-namec{
