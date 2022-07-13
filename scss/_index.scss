@@ -1,10 +1,10 @@
-.index-grid {
+/* .index-grid {
     display: flex;
     flex-direction: column;
     background-color: $colorbody2;
     width: $full;
 }
-
+ */
 /*CARRUSELES*/
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px !important;
@@ -12,91 +12,300 @@
 h2 {
     margin-bottom: 0px !important;
 }
-
-.titulocarrusel{
-    text-align: center;
-    color: white;
-    background-color: $colorbody;
-    border-top-left-radius: 15px !important;
-    border-top-right-radius: 15px !important;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-    width: 80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 30px;
-    padding-bottom: 10px;
+.main-index{
+    background-color: $colorbody2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px, 100px;
+    grid-template-areas: 
+    "carrousel1 carrousel2"
+    "slider slider";
+    .carrousel1{
+        grid-area: carrousel1;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .carrousel2{
+        grid-area: carrousel2;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .cont-slider{
+        grid-area: slider;
+            .tituloslider{
+                width: 40%;
+                height: 45px;
+                margin-left: 30%;
+                margin-right: 30%;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+    }
+    .titulocarrusel{
+        text-align: center;
+        color: white;
+        background-color: $colorbody;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        width: 84%;
+        height: 45px;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 50px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    div.carousel {
+        margin-bottom: 10px;
+        margin-top: 0px;
+        margin-left: 1%;
+        margin-right: 1%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: row; 
+        object-fit: contain;
+        width: 98%;
+        height: 300px;
+        border: 0.5px ridge #82838400;
+        box-shadow: map-get($sombras, sombracarrousel) !important;
+            .carousel-inner {
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                flex-direction: row; 
+                object-fit: contain;
+                width: $full;
+                height: 300px;   
+                    .carousel-item{
+                        width: 100% !important;
+                        transition-duration: 0.3s; 
+                        img{
+                            display: flex;
+                            align-items: center;
+                            justify-items: center;
+                            flex-direction: row; 
+                            object-fit: contain;
+                            width: $full;
+                            height: 300px;        
+                        }
+                        .zoom {
+                            transition: transform .3s; 
+                        }
+                        .zoom:hover {
+                            transform: scale(1.1); 
+                            cursor: pointer;
+                        }
+                        .img_spoon-lure {
+                            height: 300px;
+                        }
+                        .img_popper{
+                            height: 300px;
+                        }
+                        .img_cania_abu_casting {
+                            margin-top: 15px;
+                            height: 250px;
+                        }
+                        .img_cania_globeride {
+                            width: 250px;
+                        }
+                        .img_cania_recreacion_ninio {
+                            margin-top: 15px;
+                            height: 250px;
+                        }
+                    }
+            }
+            .boton_carrusel {
+                opacity: 0.1 !important;
+                background-color: $btncarrusel;
+            }
+    }
 }
-div.carousel {
-    margin-bottom: 10px;
-    margin-top: 0px;
-    margin-left: 1%;
-    margin-right: 1%;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    flex-direction: row; 
-    object-fit: contain;
-    width: 98%;
-    height: 300px;
-    border: 0.5px ridge #82838400;
-    box-shadow: map-get($sombras, sombracarrousel) !important;
-        .carousel-inner {
+
+@media screen and (max-width: 900px) {
+.main-index{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 390px), 100px;
+    grid-template-areas: 
+    "carrousel1"
+    "carrousel2"
+    "slider";
+        .carrousel1{
+            grid-area: carrousel1;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+        .carrousel2{
+            grid-area: carrousel2;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        .cont-slider {
+            grid-area: slider;
+            .tituloslider{
+                width: 80%;
+                height: 45px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+        .titulocarrusel{
+            text-align: center;
+            color: white;
+            background-color: $colorbody;
+            border-top-left-radius: 15px !important;
+            border-top-right-radius: 15px !important;
+            border-bottom-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+            width: 80%;
+            height: 45px;;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        div.carousel {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: 1%;
+            margin-right: 1%;
             display: flex;
             align-items: center;
             justify-items: center;
             flex-direction: row; 
             object-fit: contain;
-            width: $full;
-            height: 300px;   
-                .carousel-item{
-                    width: 100% !important;
-                    transition-duration: 0.1s; 
-                    img{
-                        display: flex;
-                        align-items: center;
-                        justify-items: center;
-                        flex-direction: row; 
-                        object-fit: contain;
-                        width: $full;
-                        height: 300px;        
-                    }
-                    .zoom {
-                        transition: transform .3s; 
-                    }
-                    .zoom:hover {
-                        transform: scale(1.1); 
-                        cursor: pointer;
-                    }
-                    .img_spoon-lure {
-                        height: 300px;
-                    }
-                    .img_popper{
-                        height: 300px;
-                    }
-                    .img_cania_abu_casting {
-                        margin-top: 15px;
-                        height: 250px;
-                    }
-                    .img_cania_globeride {
-                        width: 250px;
-                    }
-                    .img_cania_recreacion_ninio {
-                        margin-top: 15px;
-                        height: 250px;
-                    }
+            width: 98%;
+            height: 300px;
+            border: 0.5px ridge #82838400;
+            box-shadow: map-get($sombras, sombracarrousel) !important;
+                .carousel-inner {
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    flex-direction: row; 
+                    object-fit: contain;
+                    width: $full;
+                    height: 300px;   
+                        .carousel-item{
+                            width: 100% !important;
+                            transition-duration: 0s; 
+                            img{
+                                display: flex;
+                                align-items: center;
+                                justify-items: center;
+                                flex-direction: row; 
+                                object-fit: contain;
+                                width: $full;
+                                height: 300px;        
+                            }
+                            .zoom {
+                                transition: transform .3s; 
+                            }
+                            .zoom:hover {
+                                transform: scale(1.1); 
+                                cursor: pointer;
+                            }
+                            .img_spoon-lure {
+                                height: 300px;
+                            }
+                            .img_popper{
+                                height: 300px;
+                            }
+                            .img_cania_abu_casting {
+                                margin-top: 15px;
+                                height: 250px;
+                            }
+                            .img_cania_globeride {
+                                width: 250px;
+                            }
+                            .img_cania_recreacion_ninio {
+                                margin-top: 15px;
+                                height: 250px;
+                            }
+                        }
+                }
+                .boton_carrusel {
+                    opacity: 0.1 !important;
+                    background-color: $btncarrusel;
                 }
         }
-        .boton_carrusel {
-            opacity: 0.1 !important;
-            background-color: $btncarrusel;
-        }
+    }
 }
 
+/*Estilos de carrousel proveedores*/
+    @mixin white-gradient {
+        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    }
 
+    $animationSpeed: 30s;
 
+    // Animation
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 4))}
+    }
 
-
-
+    .tituloslider{
+        text-align: center;
+        color: white;
+        background-color: $colorbody;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        width: 80%;
+        height: 45px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    // Estilo
+    .slider {
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 100px !important;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        overflow:hidden;
+        position: relative !important;
+        width: 98% !important;
+        border: 0.5px ridge #82838400;
+        box-shadow: map-get($sombras, sombracarrousel) !important;
+            &::before,
+            &::after {
+                @include white-gradient;
+                content: "";
+                height: 100px;
+                position: absolute;
+                width: 200px;
+                z-index: 2;
+            }
+            &::after {
+                right: 0;
+                top: 0;
+                transform: rotateZ(180deg);
+            }
+            &::before {
+                left: 0;
+                top: 0;
+            }
+            .slide-track {
+                animation: scroll $animationSpeed linear infinite;
+                display: flex;
+                width: calc(250px * 4);
+            }
+            .slide {
+                height: 100px;
+                width: 250px;
+            }
+    }
 

@@ -156,13 +156,32 @@ header{
                     text-transform: none !important;
                 }
             }
+            .dropdown-menu {
+                padding: 0;
+                border: none;
+                background-color: $colordesplegablenav;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                .dropdown-item:focus, .dropdown-item:hover {
+                    background-color: #ffffff00;
+                }
+                .nav-item{
+                    .boton-nav { /*Botones desplegables del menu nav*/
+                        text-align: center;
+                        margin-left: 0px;
+                        color: map-get($colorbtn, colorletrabtn) !important;
+                    }
+                    .boton-nav:hover {  
+                        transform: scale(0.9);
+                    }
+                }
+            }
             .boton-nav { /*Botones del menu nav*/
                 margin-left: 20px;
                 color: map-get($colorbtn, colorletrabtn) !important;
             }
             .boton-nav:hover {  
                 transform: scale(0.9);
-                /* background-color: map-get($colorbtn, colorbtnhover); */
             }
             .btn:hover {
                 transform: scale(0.9);
@@ -289,6 +308,26 @@ header{
             } 
             .btn:before{
                 content: none !important;
+            }
+        }
+        .dropdown-menu {
+            padding: 0;
+            border: none;
+            background-color: $colordesplegablenav;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            .dropdown-item:focus, .dropdown-item:hover {
+                background-color: #ffffff00;
+            }
+            .nav-item{
+                .boton-nav { /*Botones desplegables del menu nav*/
+                    margin-left: 60px;
+                    color: map-get($colorbtn, colorletrabtn) !important;
+                    text-align: left;
+                }
+                .boton-nav:hover {  
+                    transform: scale(0.9);
+                }
             }
         }
     }

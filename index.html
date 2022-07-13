@@ -20,50 +20,62 @@
   </head>
   <body class="index-grid">
     <header class="header">
-        <div class="container"> <!--Container del menu-->
-            <div class="row row_header">
-              <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                        <a href="index.html"><img class="logo-pag" src="./imagenes_pagina/LogoPescandoUruguayConLetras2.png" alt="logo-pag"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-css">
-                          <li class="nav-item">
-                            <a class="nav-link active boton-nav p-1 mb-1 rounded" aria-current="page" href="index.html">Inicio</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/productos.html">Productos</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/proveedores.html">Proveedores</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/contacto.html">Contacto</a>
-                          </li>
-                        </ul>
-                        <form class="d-flex">
-                          <input class="form-control me-2 search_css" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit"><img class="lupa-src" src="./imagenes_pagina/lupa.png" alt="lupa"></button>
-                        </form>
-                        <ul class="btn-carritov">
-                          <li class="btn-carritoh">
-                            <button class="btn-carrito" id="boton-carrito"><i class="img-carrito fas fa-shopping-cart"></i><span class="cont-carrito" id="contadorCarrito">0</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-              </div>
-            </div>
+      <div class="container"> <!--Container del menu-->
+        <div class="row row_header">
+          <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a href="index.html"><img class="logo-pag" src="imagenes_pagina/LogoPescandoUruguayConLetras2.png" alt="logo-pag"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-css">
+                      <li class="nav-item">
+                        <a class="nav-link active boton-nav p-1 mb-1 rounded" aria-current="page" href="index.html">Inicio</a>
+                      </li>
+                        <!-- Desplegable de productos -->                        
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle active boton-nav p-1 mb-1 rounded" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropdown-item nav-item">
+                              <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/productos.html">Señuelos</a>
+                            </li>
+                            <li class="dropdown-item nav-item">
+                              <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/productos.html#canias">Cañas</a>
+                            </li>
+                          </ul>
+                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/proveedores.html">Proveedores</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link boton-nav p-1 mb-1 rounded" href="./pages/contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2 search_css" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit"><img class="lupa-src" src="./imagenes_pagina/lupa.png" alt="lupa"></button>
+                    </form>
+                    <ul class="btn-carritov">
+                      <li class="btn-carritoh">
+                        <button class="btn-carrito" id="boton-carrito"><i class="img-carrito fas fa-shopping-cart"></i><span class="cont-carrito" id="contadorCarrito">0</span></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+          </div>
         </div>
+      </div>
     </header>
-    <main class="main">
+    <main class="main-index">
         <!--Primer carousel-->
-        <h2 class="titulocarrusel">Algunos de nuestros señuelos</h2>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carrousel1">
+          <h2 class="titulocarrusel">Algunos de nuestros señuelos</h2>  
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <a href="./pages/productos.html"><img src="./imagenes_prod/senuelos/cuchara_mar.png" class="d-block w-100 zoom" alt="img-carousel"></a>
@@ -84,7 +96,9 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <!--Segundo carousel-->
+        </div>
+        <!--Segundo carousel-->
+        <div class="carrousel2">
           <h2 class="titulocarrusel">Algunas de nuestras cañas</h2>
           <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -107,6 +121,50 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </div>
+        <div class="cont-slider">
+          <h2 class="tituloslider">Nuestros proveedores</h2>
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/raptorseñuelos.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/abugarcia.jpg" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/hkd.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/marinesports.jpg" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/raptorseñuelos.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/abugarcia.jpg" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/hkd.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/marinesports.jpg" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/raptorseñuelos.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/abugarcia.jpg" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/hkd.png" height="100" width="250" alt="" /></a>
+              </div>
+              <div class="slide">
+                <a href="./pages/proveedores.html"><img src="./imagenes_prov/marinesports.jpg" height="100" width="250" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
     <!--CARRITO DE COMPRAS-->
     <div class="modal-contenedor">

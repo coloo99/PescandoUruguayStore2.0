@@ -2,7 +2,7 @@ let consulta = []
 let alerta = JSON.parse(localStorage.getItem('alerta'))
 localStorage.setItem('alerta', JSON.stringify(false))
 
-/*///////  FORMULARIO DE COMPRA  ///////*/
+/*///////  SE OBTIENEN LOS DATOS DEL FORMULARIO DE COMPRA  ///////*/
 const datosPedido = document.getElementById('datos-pedido');
 
 /*////////  ALERTAS ERROR Y SUCCESS  ////////*/

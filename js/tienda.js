@@ -1,4 +1,5 @@
-const contenedorProductos = document.getElementById('contenedor-productos')
+const contenedorSenuelos = document.getElementById('contenedor-senuelos')
+const contenedorCanias = document.getElementById('contenedor-canias')
 const botonTerminar = document.getElementById('terminar')
 const buscador = document.getElementById('search')
 
@@ -7,7 +8,8 @@ obtenerContenido(URLproductos)
 
 //Mostrar productos en seccion productos
 function mostrarProductos(inventarioProductos){
-    contenedorProductos.innerHTML = ""
+    contenedorSenuelos.innerHTML = ""
+    contenedorCanias.innerHTML = ""
     inventarioProductos.forEach(producto => {
     let div = document.createElement('div')
     div.classList.add('producto');
@@ -28,7 +30,11 @@ function mostrarProductos(inventarioProductos){
                             <div class="desc"><p class="desc-texto">${producto.desc}</p></div>
                         </div>
                     </div>`
-    contenedorProductos.appendChild(div)
+                    if(producto.tipo === "senuelo"){
+                        contenedorSenuelos.appendChild(div)
+                    }else{
+                        contenedorCanias.appendChild(div)
+                    }
     
     let btnAgregar = document.getElementById(`button${producto.id}`)
     btnAgregar.addEventListener('click',()=>{
@@ -36,4 +42,15 @@ function mostrarProductos(inventarioProductos){
         alertarSuccess("Agregado!", "El producto se agregó al carrito")
     })
   })
+}
+
+function errorAlCargarProductos(){ /*Se muestran sping con el error si no se llega a los productos*/
+    contenedorSenuelos.innerHTML = `<div class="loading show">
+                                        <div class="error"><p>No se encontraron productos</p></div>
+                                        <div class="cont-spin"><div class="spin"></div></div>
+                                    </div>`    /*Si hay un error accediendo a los datos se muestra el <p> con un spin en la pagina*/   
+    contenedorCanias.innerHTML = `<div class="loading show">
+                                    <div class="error"><p>No se encontraron productos</p></div>
+                                    <div class="cont-spin"><div class="spin"></div></div>
+                                </div>`    /*Si hay un error accediendo a los datos se muestra el <p> con un spin en la pagina*/ 
 }

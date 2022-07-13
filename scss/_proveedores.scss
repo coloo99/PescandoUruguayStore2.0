@@ -1,11 +1,11 @@
 .index_grid_prov {
     background-color: $colorbody2 !important;
+    padding-top: 50px;
         .titulo-prov{
             width: 60%;
             height: 100%;
             margin-left: 20%;
             margin-right: 20%;
-            margin-top: 35px;
             margin-bottom: 20px;
             padding-bottom: 10px;
             padding-top: 3px;
@@ -26,23 +26,23 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            background-color: #9ac4ef00 !important;
+            background-color: #fefefe00 !important;
                 .row-cols-md-2 {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     justify-items: center;
-                    background-color: #9ac4ef00 !important;
+                    background-color: #ffffff00 !important;
                 }
                 div.row_prov {
-                    background-color: #9ac4ef00 !important;
+                    background-color: #ffffff00 !important;
                         .col_prov{
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             justify-items: center;
                             margin-top: 20px !important;
-                            background-color: #9ac4ef00 !important;
+                            background-color: #ffffff00 !important;
                                 .border {
                                     border: 3px solid #5c94bd!important;
                                     box-shadow: 0 0 5px rgba(4, 8, 27, 0.797) !important;
