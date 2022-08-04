@@ -43,9 +43,14 @@
                             justify-items: center;
                             margin-top: 20px !important;
                             background-color: #ffffff00 !important;
-                                .border {
-                                    border: 3px solid #5c94bd!important;
-                                    box-shadow: 0 0 5px rgba(4, 8, 27, 0.797) !important;
+                            .border {
+                                border: 0px solid #468abba8!important;
+                                box-shadow: 0 0 5px rgba(4, 8, 27, 0.797) !important;
+                            }
+                            .card{
+                                background-color: #d6d6d6b3;
+                                .card-text{
+                                    text-align: center;
                                 }
                                 .mapa_prov {
                                     width: 100%;
@@ -68,6 +73,7 @@
                                     transform: scale(0.9) !important;
                                     background-color: $colorbtnformhover !important;
                                 }
+                            }
                         }
                     
                 }

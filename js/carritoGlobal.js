@@ -223,7 +223,6 @@ if(enviarConsulta != null || undefined){
             consulta.push(new Consulta(document.getElementById("nombrec").value, document.getElementById("apellidoc").value, document.getElementById("emailc").value, document.getElementById("telefonoc").value, document.getElementById("consulta").value));
             localStorage.setItem('consulta', JSON.stringify(consulta));
         }
-        /* enviarEmailConsulta() */
     })
 }
 

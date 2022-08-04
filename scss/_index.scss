@@ -1,10 +1,3 @@
-/* .index-grid {
-    display: flex;
-    flex-direction: column;
-    background-color: $colorbody2;
-    width: $full;
-}
- */
 /*CARRUSELES*/
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px !important;
@@ -236,76 +229,81 @@ h2 {
         }
     }
 }
-
+#btncarr{
+    z-index: 7;
+}
 /*Estilos de carrousel proveedores*/
-    @mixin white-gradient {
-        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-    }
+@mixin white-gradient {
+    background: linear-gradient(to right,  rgba(255, 255, 255, 0) 0%,rgba(255,255,255,0) 100%);
+}
 
-    $animationSpeed: 30s;
+$animationSpeed: 30s;
 
-    // Animation
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-250px * 4))}
-    }
+// Animation
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 4))}
+}
 
-    .tituloslider{
-        text-align: center;
-        color: white;
-        background-color: $colorbody;
-        border-top-left-radius: 15px !important;
-        border-top-right-radius: 15px !important;
-        border-bottom-left-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
-        width: 80%;
-        height: 45px;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 30px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    // Estilo
-    .slider {
-        background: rgba(255, 255, 255, 0);
-        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-        height: 100px !important;
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        overflow:hidden;
-        position: relative !important;
-        width: 98% !important;
-        border: 0.5px ridge #82838400;
-        box-shadow: map-get($sombras, sombracarrousel) !important;
-            &::before,
-            &::after {
-                @include white-gradient;
-                content: "";
-                height: 100px;
-                position: absolute;
-                width: 200px;
-                z-index: 2;
-            }
-            &::after {
-                right: 0;
-                top: 0;
-                transform: rotateZ(180deg);
-            }
-            &::before {
-                left: 0;
-                top: 0;
-            }
-            .slide-track {
-                animation: scroll $animationSpeed linear infinite;
-                display: flex;
-                width: calc(250px * 4);
-            }
-            .slide {
-                height: 100px;
-                width: 250px;
-            }
-    }
-
+.tituloslider{
+    text-align: center;
+    color: white;
+    background-color: $colorbody;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    width: 80%;
+    height: 45px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+// Estilo
+.slider {
+    background: rgba(255, 255, 255, 0);
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+    height: 100px !important;
+    /* margin-left: 1%;
+    margin-right: 1%; */
+    margin-top: 0px;
+/*     margin-bottom: 10px; */
+    overflow:hidden;
+    position: relative !important;
+    width: 100% !important;
+    border: 0.5px ridge #82838400;
+    /* box-shadow: map-get($sombras, sombracarrousel) !important; */
+        &::before,
+        &::after {
+            @include white-gradient;
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+        &::before {
+            left: 0;
+            top: 0;
+        }
+        .slide-track {
+            animation: scroll $animationSpeed linear infinite;
+            display: flex;
+            width: calc(250px * 4);
+        }
+        .slide {
+            height: 100px;
+            width: 250px;
+            
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+}
